@@ -41,6 +41,9 @@ module.exports = {
         'inner-2': '-2px',
         'inner-4': '-4px',
       },
+      fontSize:{
+        'xxs':'10px'
+      }
     },
   },
   plugins: [],

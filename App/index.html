@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mijin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../src/output.css" rel="stylesheet">
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    #bg{
+        background-image: url('../assets/images/bg/bg.png');
+        background-position: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #landing{
+        background-color: rgba(255, 255, 255, 0.242);
+    }
+</style>
+<body>
+    <nav>
+        <div class="w-8/12 m-auto pt-4 flex justify-between">
+            <div class="logo w-10 ">
+                <img class=" w-full h-full" src="../assets/images/logo/mjin.png" alt="">
+            </div>
+            <div class="tool-box w-fit">
+                <button class="min-h-10 rounded-md py-2 px-3 inline-flex items-center justify-center text-sm font-medium text-white bg-primary transition-colors disabled:opacity-50 shadow hover:bg-black/90">
+                    <span class="px-1">Documentation</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <section id="landing" class="text-center py-10 w-full h-96 relative ">
+        <div class="content">
+            <h1 class="text-5xl pt-20 font-bold">MjinUI</h1>
+            <span class="block pt-5 text-2xl font-semibold">Easy , Light-weight and Open Source</span>
+            <span class="block pt-5 text-sm text-gray-600 font-normal">Tailwind Components For </span>
+            <div class="card-btn gap-4 flex justify-center  pt-5">
+                <button class="min-h-6 rounded-sm py-1 px-2 inline-flex items-center justify-center text-md font-medium text-dark bg-white shadow-md transition-colors disabled:opacity-50 shadow hover:bg-orange/90">
+                    <img class="w-5 h-5 pe-1" src="../assets/images/logo/file-type-html.svg" alt="">
+                    <span class="px-1">
+                        HTML
+                    </span>
+                </button>
+
+                
+                <button class="min-h-6 rounded-sm py-1 px-2 inline-flex items-center justify-center text-md font-medium text-dark bg-white shadow-md transition-colors disabled:opacity-50 shadow hover:bg-orange/90">
+                    <img class="w-5 h-5 pe-1" src="../assets/images/logo/laravel.svg" alt="">
+                    <span class="px-1">Livewire</span>
+                </button>
+
+
+                
+                <button class="min-h-6 rounded-sm py-1 px-2 inline-flex items-center justify-center text-md font-medium text-dark bg-white shadow-md transition-colors disabled:opacity-50 shadow hover:bg-orange/90">
+                    <img class="w-5 h-5 pe-1" src="../assets/images/logo/react.svg" alt="">
+                    <span class="px-1">React</span>
+                </button>
+
+
+            </div>
+        </div>
+        <div class="w-full top-3 h-full absolute pt-5 " style="z-index: -9;" id="bg"></div>
+    </section>
+</body>
+</html>

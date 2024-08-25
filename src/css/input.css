@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
+#bg {
+  background-image: url("./assets/images/bg/bg.png");
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#landing {
+  background-color: rgba(255, 255, 255, 0.242);
+}
 
 .custom_scroll_bar {
   overflow-x: auto;
@@ -23,21 +35,21 @@
   @apply bg-transparent;
 }
 .card {
-  @apply  p-3  rounded-lg ;
+  @apply p-3  rounded-lg;
 }
 .col-12 {
-  @apply  grid grid-cols-12 gap-4 ;
+  @apply grid grid-cols-12 gap-4;
 }
-.col-3{
+.col-3 {
   @apply col-span-12 md:col-span-4 lg:col-span-3;
 }
 
-.col-4{
+.col-4 {
   @apply col-span-12 md:col-span-6 lg:col-span-4;
 }
-.col-6{
+.col-6 {
   @apply col-span-12 md:col-span-6 lg:col-span-6;
 }
-.btn{
-  @apply flex items-center w-full gap-2 px-3 py-2  ;
+.btn {
+  @apply flex items-center w-full gap-2 px-3 py-2;
 }

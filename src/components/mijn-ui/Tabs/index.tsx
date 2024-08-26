@@ -1,17 +1,6 @@
-import React, {
-  ComponentProps,
-  createContext,
-  forwardRef,
-  useCallback,
-  useContext,
-  useState,
-} from "react";
+import React, { ComponentProps, createContext, forwardRef, useCallback, useContext, useState } from "react";
 
-import {
-  PolymorphicComponentPropsWithRef,
-  PolymorphicRef,
-  WithDisplayName,
-} from "@/types";
+import { PolymorphicComponentPropsWithRef, PolymorphicRef, WithDisplayName } from "@/types";
 import { cn } from "@/utils";
 
 import { buttonStyles } from "../Button";
@@ -37,12 +26,7 @@ type TabsProps = ComponentProps<"div"> & {
 };
 
 // Main Tabs component managing the current tab state
-const Tabs = ({
-  children,
-  defaultValue = "",
-  className,
-  ...props
-}: TabsProps) => {
+const Tabs = ({ children, defaultValue = "", className, ...props }: TabsProps) => {
   const [currentValue, setCurrentValue] = useState(defaultValue);
 
   const toggleCurrentValue = useCallback((value: string) => {
@@ -59,33 +43,21 @@ const Tabs = ({
 };
 
 // TabsList component for wrapping tab triggers
-const TabsList = forwardRef<HTMLDivElement, ComponentProps<"div">>(
-  ({ children, className, ...props }, ref) => (
-    <div
-      ref={ref}
-      className={cn("flex items-center justify-center gap-1", className)}
-      {...props}
-    >
-      {children}
-    </div>
-  ),
-);
+const TabsList = forwardRef<HTMLDivElement, ComponentProps<"div">>(({ children, className, ...props }, ref) => (
+  <div ref={ref} className={cn("flex items-center justify-center gap-1", className)} {...props}>
+    {children}
+  </div>
+));
 
 TabsList.displayName = "TabsList";
 
-export type TabsHandlerProps<C extends React.ElementType> =
-  PolymorphicComponentPropsWithRef<C, { value: string }>;
+export type TabsHandlerProps<C extends React.ElementType> = PolymorphicComponentPropsWithRef<C, { value: string }>;
 
-type TabsHandlerComponent = <C extends React.ElementType = "button">(
-  props: TabsHandlerProps<C>,
-) => React.ReactElement | null;
+type TabsHandlerComponent = <C extends React.ElementType = "button">(props: TabsHandlerProps<C>) => React.ReactElement | null;
 
 // TabsHandler component for each individual tab
 const TabsHandler: WithDisplayName<TabsHandlerComponent> = forwardRef(
-  <C extends React.ElementType = "button">(
-    { renderAs, value, className, ...props }: TabsHandlerProps<C>,
-    ref: PolymorphicRef<C>,
-  ) => {
+  <C extends React.ElementType = "button">({ renderAs, value, className, ...props }: TabsHandlerProps<C>, ref: PolymorphicRef<C>) => {
     const { currentValue, toggleCurrentValue } = useTabs();
     const Component = renderAs || "button";
 
@@ -96,14 +68,13 @@ const TabsHandler: WithDisplayName<TabsHandlerComponent> = forwardRef(
         className={cn(
           buttonStyles(),
           "bg-transparent text-muted-foreground hover:bg-card hover:text-card-foreground",
-          value === currentValue &&
-            "bg-card text-card-foreground drop-shadow-sm",
-          className,
+          value === currentValue && "bg-card text-card-foreground drop-shadow-sm",
+          className
         )}
         {...props}
       />
     );
-  },
+  }
 ) as TabsHandlerComponent;
 
 TabsHandler.displayName = "TabsHandler";
@@ -113,17 +84,15 @@ type TabsContentProps = ComponentProps<"div"> & {
 };
 
 // TabsContent component to display the content of the active tab
-const TabsContent = forwardRef<HTMLDivElement, TabsContentProps>(
-  ({ children, value, className, ...props }, ref) => {
-    const { currentValue } = useTabs();
+const TabsContent = forwardRef<HTMLDivElement, TabsContentProps>(({ children, value, className, ...props }, ref) => {
+  const { currentValue } = useTabs();
 
-    return currentValue === value ? (
-      <div ref={ref} className={cn("", className)} {...props}>
-        {children}
-      </div>
-    ) : null;
-  },
-);
+  return currentValue === value ? (
+    <div ref={ref} className={cn("", className)} {...props}>
+      {children}
+    </div>
+  ) : null;
+});
 
 TabsContent.displayName = "TabsContent";
 

@@ -6,7 +6,7 @@ import LinkCard from "./link-card";
 const ShowcaseCalendar = () => {
   return (
     <LinkCard
-      href="https://mijnui.com/docs/?path=/docs/components-checkbox--docs"
+      href="https://mijnui.com/docs/?path=/docs/components-calendar--docs"
       label="Calendar"
     >
       <Calendar className="max-w-56" />

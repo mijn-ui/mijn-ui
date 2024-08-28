@@ -1,11 +1,13 @@
-import LinkCard from "@/components/showcase/link-card";
 import React from "react";
+
 import { LuChevronsUpDown } from "react-icons/lu";
+
+import LinkCard from "@/components/showcase/link-card";
 
 const ShowcaseComboBox = () => {
   return (
     <LinkCard
-      href="https://mijnui.com/docs/?path=/docs/components-alertdialog--docs"
+      href="https://mijnui.com/docs/?path=/docs/components-comboBox--docs"
       label="ComboBox"
     >
       <div className="relative">

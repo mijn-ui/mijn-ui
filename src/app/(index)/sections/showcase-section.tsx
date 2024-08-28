@@ -4,12 +4,12 @@ import React, { useEffect } from "react";
 
 import ShowcaseAlert from "@/components/showcase/showcase-alert";
 import ShowcaseAlertDialog from "@/components/showcase/showcase-alert-dialog";
-import ShowcaseButton from "@/components/showcase/showcase-button";
 import ShowcaseCalendar from "@/components/showcase/showcase-calendar";
 import ShowcaseCard from "@/components/showcase/showcase-card";
 import ShowcaseComboBox from "@/components/showcase/showcase-combo-box";
 import ShowcaseInput from "@/components/showcase/showcase-input";
 import ShowcaseProgress from "@/components/showcase/showcase-progress";
+import ShowcaseTable from "@/components/showcase/showcase-table";
 import ShowcaseTabs from "@/components/showcase/showcase-tabs";
 
 const ShowcaseSection = () => {
@@ -45,14 +45,14 @@ const ShowcaseSection = () => {
         id="cards"
       >
         <ShowcaseTabs />
-        <ShowcaseCalendar />
-        <ShowcaseAlertDialog />
         <ShowcaseComboBox />
-        <ShowcaseProgress />
-        <ShowcaseInput />
-        <ShowcaseButton />
-        <ShowcaseAlert />
         <ShowcaseCard />
+        <ShowcaseAlertDialog />
+        <ShowcaseProgress />
+        <ShowcaseCalendar />
+        <ShowcaseTable />
+        <ShowcaseAlert />
+        <ShowcaseInput />
       </div>
     </section>
   );

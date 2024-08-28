@@ -21,7 +21,9 @@ const LinkCard = ({ href, label, children, className }: LinkCardProps) => {
         )}
         id="card"
       >
-        <div className="card_glow_content p-10">{children}</div>
+        <div className="card_glow_content pointer-events-none p-10">
+          {children}
+        </div>
       </Card>
       <div className="absolute left-0 top-0 p-2.5 sm:p-5">
         <p className="bg-gradient-to-br from-black to-zinc-700 bg-clip-text text-sm text-transparent sm:text-base">

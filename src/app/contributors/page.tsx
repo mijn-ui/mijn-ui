@@ -1,11 +1,14 @@
-import Image from "next/image";
 import React from "react";
+
+import Image from "next/image";
 import { LuArrowLeft, LuChevronLeft, LuChevronRight } from "react-icons/lu";
-import CONTRIBUTORS from "./data.json";
+
 import GridGradient from "@/components/decorators/grid-gradient";
 import Footer from "@/components/footer";
-import SubTitle from "@/components/typography/sub-title";
 import StyledLink from "@/components/typography/link";
+import SubTitle from "@/components/typography/sub-title";
+
+import CONTRIBUTORS from "./data.json";
 
 const Contributors = () => {
   return (
@@ -35,17 +38,7 @@ const Contributors = () => {
 
       <Footer
         className="mt-20 sm:fixed sm:inset-x-0 sm:bottom-0 sm:m-0"
-        text="All Right Reserved By PicoInnovation."
-        companyInfo={[
-          {
-            name: "Pico Innovation",
-            logoURL: "/assets/picoinno.png",
-          },
-          {
-            name: "Pico SBS",
-            logoURL: "/assets/picosbs.png",
-          },
-        ]}
+        text="All Right Reserved By MijnUI."
       />
     </div>
   );

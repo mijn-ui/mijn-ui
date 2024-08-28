@@ -52,20 +52,7 @@ const Home = () => {
         </div>
       </main>
 
-      <Footer
-        className="mt-20"
-        text="All Right Reserved By PicoInnovation."
-        companyInfo={[
-          {
-            name: "Pico Innovation",
-            logoURL: "/assets/picoinno.png",
-          },
-          {
-            name: "Pico SBS",
-            logoURL: "/assets/picosbs.png",
-          },
-        ]}
-      />
+      <Footer className="mt-20" text="All Right Reserved By MijnUI." />
     </div>
   );
 };

@@ -1,0 +1,27 @@
+@import "./animation.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom_scroll_bar {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.custom_scroll_bar::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+.custom_scroll_bar::-webkit-scrollbar-thumb {
+  border-radius: 0.25rem;
+  color: hsla(22, 100%, 50%, 0.493);
+  @apply bg-neutral-300;
+}
+
+.custom_scroll_bar::-webkit-scrollbar-track {
+  border-radius: 0.25rem;
+  @apply bg-slate-50;
+  margin: 0 0.5rem;
+}

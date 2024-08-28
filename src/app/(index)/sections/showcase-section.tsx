@@ -16,7 +16,7 @@ const ShowcaseSection = () => {
   // card glow effect
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      const cards = document.getElementsByClassName("card");
+      const cards = document.getElementsByClassName("card_glow");
       Array.from(cards).forEach((card) => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
@@ -39,8 +39,11 @@ const ShowcaseSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full lg:max-w-screen-xl rounded-3xl bg-white ring ring-black max-w-lg">
-      <div className="p-2 scroll_animation min-h-screen sm:gap-2 w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3" id="cards">
+    <section className="relative w-full max-w-lg rounded-3xl bg-white ring ring-black lg:max-w-screen-xl">
+      <div
+        className="scroll_animation grid min-h-screen w-full grid-cols-1 p-2 sm:gap-2 lg:grid-cols-2 xl:grid-cols-3"
+        id="cards"
+      >
         <ShowcaseTabs />
         <ShowcaseAlertDialog />
         <ShowcaseComboBox />

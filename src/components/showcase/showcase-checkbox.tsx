@@ -9,7 +9,7 @@ const ShowcaseCalendar = () => {
       href="https://mijnui.com/docs/?path=/docs/components-checkbox--docs"
       label="Calendar"
     >
-      <Calendar className="max-w-64 space-y-1" />
+      <Calendar className="max-w-56" />
     </LinkCard>
   );
 };

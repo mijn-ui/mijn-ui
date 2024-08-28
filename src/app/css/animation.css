@@ -43,12 +43,20 @@
 }
 
 .card_glow::before {
-  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 207, 191, 0.253), transparent 40%);
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 207, 191, 0.253),
+    transparent 40%
+  );
   z-index: 3;
 }
 
 .card_glow::after {
-  background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(255, 207, 191, 0.4), transparent 40%);
+  background: radial-gradient(
+    400px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 207, 191, 0.4),
+    transparent 40%
+  );
   z-index: 1;
 }
 

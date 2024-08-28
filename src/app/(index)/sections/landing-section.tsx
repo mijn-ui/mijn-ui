@@ -13,22 +13,32 @@ type LandingSectionProps = {
   }>;
 };
 
-const LandingSection = ({ title, description, mobileDescription, builtFor }: LandingSectionProps) => {
+const LandingSection = ({
+  title,
+  description,
+  mobileDescription,
+  builtFor,
+}: LandingSectionProps) => {
   return (
-    <section className="w-full max-w-4xl flex items-center flex-col pt-32 sm:pt-44 md:pt-56 text-center md:px-10 sm:px-8 px-5">
+    <section className="flex w-full max-w-4xl flex-col items-center px-5 pt-32 text-center sm:px-8 sm:pt-44 md:px-10 md:pt-56">
       <Title>{title}</Title>
 
-      <div className="mt-6 text-base sm:text-lg font-medium text-neutral-700">
+      <div className="mt-6 text-base font-medium text-neutral-700 sm:text-lg">
         <p className="hidden sm:block">{description}</p>
 
         <p className="block sm:hidden">{mobileDescription}</p>
       </div>
 
-      <p className="text-neutral-500 uppercase text-xs mt-6">Built For</p>
+      <p className="mt-6 text-xs uppercase text-neutral-500">Built For</p>
 
-      <div className="flex relative items-center gap-2 mt-2">
+      <div className="relative mt-2 flex items-center gap-2">
         {builtFor.map(({ icon, name }) => (
-          <Button key={name} variant={"outline"} size={"sm"} className="relative text-xs">
+          <Button
+            key={name}
+            variant={"outline"}
+            size={"sm"}
+            className="relative text-xs"
+          >
             {icon}
             {name}
           </Button>

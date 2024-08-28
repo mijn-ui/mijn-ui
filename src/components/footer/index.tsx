@@ -15,13 +15,26 @@ type Company = {
 
 const Footer = ({ companyInfo, className, text }: FooterProps) => {
   return (
-    <footer className={cn("bg-black py-4 w-full flex items-center justify-center", className)}>
-      <div className="w-full px-5 py-2 flex flex-col sm:flex-row gap-2 items-center justify-between max-w-screen-lg">
+    <footer
+      className={cn(
+        "flex w-full items-center justify-center bg-black py-4",
+        className,
+      )}
+    >
+      <div className="flex w-full max-w-screen-lg flex-col items-center justify-between gap-2 px-5 py-2 sm:flex-row">
         <div className="flex items-center gap-10">
-          {Array.isArray(companyInfo) ? companyInfo.map((company) => <RenderCompanyInfo key={company.name} {...company} />) : <RenderCompanyInfo {...companyInfo} />}
+          {Array.isArray(companyInfo) ? (
+            companyInfo.map((company) => (
+              <RenderCompanyInfo key={company.name} {...company} />
+            ))
+          ) : (
+            <RenderCompanyInfo {...companyInfo} />
+          )}
         </div>
 
-        <p className="text-xs bg-gradient-to-br from-white to-zinc-300 sm:text-sm bg-clip-text font-medium tracking-tight text-transparent">{text}</p>
+        <p className="bg-gradient-to-br from-white to-zinc-300 bg-clip-text text-xs font-medium tracking-tight text-transparent sm:text-sm">
+          {text}
+        </p>
       </div>
     </footer>
   );
@@ -29,8 +42,14 @@ const Footer = ({ companyInfo, className, text }: FooterProps) => {
 
 const RenderCompanyInfo = ({ name, logoURL }: Company) => (
   <div className="flex items-center gap-2">
-    <Image className="w-6 h-6 sm:w-7 sm:h-7" src={logoURL} alt={name} width={40} height={40} />
-    <p className="text-neutral-300 text-xs sm:text-sm">{name}</p>
+    <Image
+      className="h-6 w-6 sm:h-7 sm:w-7"
+      src={logoURL}
+      alt={name}
+      width={40}
+      height={40}
+    />
+    <p className="text-xs text-neutral-300 sm:text-sm">{name}</p>
   </div>
 );
 

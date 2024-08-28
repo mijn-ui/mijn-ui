@@ -18,7 +18,7 @@ const Home = () => {
       <BackgroundGradient />
       <GridGradient />
 
-      <main className="w-full flex-col flex items-center justify-center">
+      <main className="flex w-full flex-col items-center justify-center">
         <LandingSection
           title="Reusable components that fit right into your projects."
           description="A new and evolving library of reusable components—built with simplicity at its core and aiming to become flexible, high-performance solution for projects of all sizes."
@@ -39,13 +39,13 @@ const Home = () => {
           ]}
         />
 
-        <div className="p-4 sm:p-8 mt-[clamp(120px,15vw,200px)] w-full flex items-center justify-center">
+        <div className="mt-[clamp(120px,15vw,200px)] flex w-full items-center justify-center p-4 sm:p-8">
           <ShowcaseSection />
         </div>
 
-        <div className="relative w-full max-w-screen-xl flex items-center justify-center flex-col mt-[clamp(80px,12vw,80px)]">
+        <div className="relative mt-[clamp(80px,12vw,80px)] flex w-full max-w-screen-xl flex-col items-center justify-center">
           <BorderGradient className="max-w-md" />
-          <div className="w-full my-14">
+          <div className="my-14 w-full">
             <ContributorSection contributors={CONTRIBUTORS} />
           </div>
           <BorderGradient className="max-w-md" />

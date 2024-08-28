@@ -11,12 +11,20 @@ type ContributorSectionProps = {
 
 const ContributorSection = ({ contributors }: ContributorSectionProps) => {
   return (
-    <section className="w-full flex items-center justify-center flex-col p-2 sm:p-5">
-      <h3 className="bg-gradient-to-br from-black to-zinc-500 bg-clip-text text-2xl/[1.2] sm:text-4xl/[1.2] font-bold sm:font-extrabold tracking-tight text-transparent text-center">Contributors</h3>
+    <section className="flex w-full flex-col items-center justify-center p-2 sm:p-5">
+      <h3 className="bg-gradient-to-br from-black to-zinc-500 bg-clip-text text-center text-2xl/[1.2] font-bold tracking-tight text-transparent sm:text-4xl/[1.2] sm:font-extrabold">
+        Contributors
+      </h3>
 
-      <div className="mt-8 flex flex-wrap lg:divide-x lg:divide-gray-400 gap-y-8 gap-x-5 lg:gap-0 items-center justify-center w-full">
+      <div className="mt-8 flex w-full flex-wrap items-center justify-center gap-x-5 gap-y-8 lg:gap-0 lg:divide-x lg:divide-gray-400">
         {contributors.map((contributor) => (
-          <Contributor key={contributor.name} name={contributor.name} position={contributor.position} link={contributor.link} avatarURL={contributor.avatarURL} />
+          <Contributor
+            key={contributor.name}
+            name={contributor.name}
+            position={contributor.position}
+            link={contributor.link}
+            avatarURL={contributor.avatarURL}
+          />
         ))}
       </div>
 
@@ -36,12 +44,16 @@ type Contributor = {
 
 const Contributor = ({ link, name, avatarURL, position }: Contributor) => {
   return (
-    <div className="flex px-4 min-w-40 items-center justify-center flex-col text-center">
-      <div className="relative flex items-center justify-center shrink-0 overflow-hidden ring-ring-white bg-muted rounded-full ring-1 w-8 h-8">
-        {avatarURL ? <Image src={avatarURL} alt={name} width={40} height={40} /> : <span>{name?.substring(0, 1)}</span>}
+    <div className="flex min-w-40 flex-col items-center justify-center px-4 text-center">
+      <div className="relative flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-full bg-muted ring-1 ring-ring-white">
+        {avatarURL ? (
+          <Image src={avatarURL} alt={name} width={40} height={40} />
+        ) : (
+          <span>{name?.substring(0, 1)}</span>
+        )}
       </div>
 
-      <a href={link} target="_blank" className="text-sm hover:underline mt-1">
+      <a href={link} target="_blank" className="mt-1 text-sm hover:underline">
         {name}
       </a>
       <p className="text-xs text-muted-foreground">&#8226; {position}</p>

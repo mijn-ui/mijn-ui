@@ -13,10 +13,10 @@ const Contributors = () => {
       <GridGradient />
       <BackgroundGradient />
 
-      <main className="relative flex items-center px-5 pt-24 sm:pt-32 sm:pb-24 flex-col h-full max-h-max">
+      <main className="relative flex h-full max-h-max flex-col items-center px-5 pt-24 sm:pb-24 sm:pt-32">
         <SubTitle>Contributors</SubTitle>
 
-        <div className="w-full mt-10 overflow-y-auto p-2.5 sm:p-5 shadow-sm bg-card/40 rounded-3xl max-w-3xl backdrop-blur-[0.5px]">
+        <div className="mt-10 w-full max-w-3xl overflow-y-auto rounded-3xl bg-card/40 p-2.5 shadow-sm backdrop-blur-[0.5px] sm:p-5">
           <div className="space-y-10 sm:space-y-0">
             {CONTRIBUTORS.map((contributor) => (
               <RenderContributor key={contributor.name} {...contributor} />
@@ -24,7 +24,7 @@ const Contributors = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-between gap-3 w-full max-w-3xl mt-5">
+        <div className="mt-5 flex w-full max-w-3xl items-center justify-between gap-3">
           <StyledLink href={"/"}>
             <LuArrowLeft /> Home
           </StyledLink>
@@ -34,7 +34,7 @@ const Contributors = () => {
       </main>
 
       <Footer
-        className="mt-20  sm:fixed sm:inset-x-0 sm:bottom-0 sm:m-0"
+        className="mt-20 sm:fixed sm:inset-x-0 sm:bottom-0 sm:m-0"
         text="All Right Reserved By PicoInnovation."
         companyInfo={[
           {
@@ -55,10 +55,26 @@ export default Contributors;
 
 type RenderContributorProps = (typeof CONTRIBUTORS)[number];
 
-const RenderContributor = ({ name, avatarURL, link, contributedTo, position }: RenderContributorProps) => (
-  <div className="flex relative flex-col sm:flex-row text-center sm:text-left items-center gap-4 py-3 px-4">
-    <div className="flex items-center justify-center shrink-0 overflow-hidden ring-ring-white bg-muted rounded-full ring-1 w-10 h-10">
-      {avatarURL ? <Image src={avatarURL} alt={name} width={120} height={120} className="w-full h-full object-cover" /> : <span>{name.substring(0, 1)}</span>}
+const RenderContributor = ({
+  name,
+  avatarURL,
+  link,
+  contributedTo,
+  position,
+}: RenderContributorProps) => (
+  <div className="relative flex flex-col items-center gap-4 px-4 py-3 text-center sm:flex-row sm:text-left">
+    <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-muted ring-1 ring-ring-white">
+      {avatarURL ? (
+        <Image
+          src={avatarURL}
+          alt={name}
+          width={120}
+          height={120}
+          className="h-full w-full object-cover"
+        />
+      ) : (
+        <span>{name.substring(0, 1)}</span>
+      )}
     </div>
 
     <div className="w-full">
@@ -69,22 +85,26 @@ const RenderContributor = ({ name, avatarURL, link, contributedTo, position }: R
         <span className="font-medium">Contributed to:</span> {contributedTo}
       </p>
     </div>
-    <p className="text-xs shrink-0 text-muted-foreground z-10 top-0 right-0 p-2 absolute text-left">&#8226; {position}</p>
+    <p className="absolute right-0 top-0 z-10 shrink-0 p-2 text-left text-xs text-muted-foreground">
+      &#8226; {position}
+    </p>
   </div>
 );
 
 const Pagination = () => (
   <div className="flex items-center gap-2">
-    <button className="w-8 h-8 text-disabled-foreground flex items-center justify-center">
+    <button className="flex h-8 w-8 items-center justify-center text-disabled-foreground">
       <LuChevronLeft size={20} />
     </button>
 
-    <p className="text-disabled-foreground text-xs cursor-pointer">0</p>
+    <p className="cursor-pointer text-xs text-disabled-foreground">0</p>
 
-    <button className="w-8 h-8 text-disabled-foreground flex items-center justify-center">
+    <button className="flex h-8 w-8 items-center justify-center text-disabled-foreground">
       <LuChevronRight size={20} />
     </button>
   </div>
 );
 
-const BackgroundGradient = () => <div className="absolute inset-0 -z-10 bg-[image:radial-gradient(100%_100%_at_50%_0%,hsl(18,81.9%,65.3%,0.2),rgba(255,255,255,0))]"></div>;
+const BackgroundGradient = () => (
+  <div className="absolute inset-0 -z-10 bg-[image:radial-gradient(100%_100%_at_50%_0%,hsl(18,81.9%,65.3%,0.2),rgba(255,255,255,0))]"></div>
+);

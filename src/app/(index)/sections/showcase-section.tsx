@@ -6,7 +6,7 @@ import ShowcaseAlert from "@/components/showcase/showcase-alert";
 import ShowcaseAlertDialog from "@/components/showcase/showcase-alert-dialog";
 import ShowcaseButton from "@/components/showcase/showcase-button";
 import ShowcaseCard from "@/components/showcase/showcase-card";
-import ShowcaseCheckbox from "@/components/showcase/showcase-checkbox";
+import ShowcaseCalendar from "@/components/showcase/showcase-checkbox";
 import ShowcaseComboBox from "@/components/showcase/showcase-combo-box";
 import ShowcaseInput from "@/components/showcase/showcase-input";
 import ShowcaseProgress from "@/components/showcase/showcase-progress";
@@ -45,13 +45,13 @@ const ShowcaseSection = () => {
         id="cards"
       >
         <ShowcaseTabs />
+        <ShowcaseCalendar />
         <ShowcaseAlertDialog />
         <ShowcaseComboBox />
         <ShowcaseProgress />
         <ShowcaseInput />
         <ShowcaseButton />
         <ShowcaseAlert />
-        <ShowcaseCheckbox />
         <ShowcaseCard />
       </div>
     </section>

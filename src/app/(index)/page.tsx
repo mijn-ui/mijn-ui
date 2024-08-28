@@ -25,15 +25,15 @@ const Home = () => {
           mobileDescription="A new and evolving library of reusable components—built with simplicity at its core and aiming to become flexible."
           builtFor={[
             {
-              icon: <FaHtml5 size={18} className="text-[#e34c26]" />,
+              icon: <FaHtml5 size={18} className="text-html-logo" />,
               name: "HTML",
             },
             {
-              icon: <FaReact size={18} className="text-[#0058cc]" />,
+              icon: <FaReact size={18} className="text-react-logo" />,
               name: "React",
             },
             {
-              icon: <FaLaravel className="text-[#F05340]" size={18} />,
+              icon: <FaLaravel size={18} className="text-laravel-logo" />,
               name: "Laravel",
             },
           ]}

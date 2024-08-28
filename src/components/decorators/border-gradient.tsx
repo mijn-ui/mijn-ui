@@ -1,13 +1,16 @@
-import { cn } from "@/utils";
 import React from "react";
+
+import { cn } from "@/utils";
 
 type BorderGradientProps = {
   color?: string;
   className?: string;
 };
 
+const PRIMARY_COLOR = "rgba(249,115,22,0.9)";
+
 const BorderGradient = ({
-  color = "rgba(249,115,22,0.9)",
+  color = PRIMARY_COLOR,
   className,
 }: BorderGradientProps) => {
   return (

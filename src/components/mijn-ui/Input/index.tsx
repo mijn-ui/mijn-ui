@@ -31,7 +31,7 @@ const Input: WithDisplayName<InputComponent> = forwardRef(
     ref: PolymorphicRef<C>,
   ) => {
     const Component = renderAs || "input";
-    const inputId = id || generateId();
+    const inputId = id === undefined ? generateId() : id;
 
     return (
       <div

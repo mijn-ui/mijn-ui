@@ -1,7 +1,9 @@
 import React from "react";
-import LinkCard from "./link-card";
-import { Input } from "../mijn-ui/Input";
+
 import { LuSearch } from "react-icons/lu";
+
+import { Input } from "../mijn-ui/Input";
+import LinkCard from "./link-card";
 
 const ShowcaseInput = () => {
   return (
@@ -11,6 +13,7 @@ const ShowcaseInput = () => {
     >
       <Input
         placeholder="Search..."
+        id="showcase-input"
         readOnly
         startIcon={<LuSearch />}
         className="max-w-60 text-xs"

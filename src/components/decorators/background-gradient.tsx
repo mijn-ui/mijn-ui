@@ -1,13 +1,16 @@
-import { cn } from "@/utils";
 import React from "react";
+
+import { cn } from "@/utils";
 
 type BackgroundGradient = {
   color?: string;
   className?: string;
 };
 
+const PRIMARY_COLOR = "hsl(18,81.9%,65.3%,0.5)";
+
 const BackgroundGradient = ({
-  color = "hsl(18,81.9%,65.3%,0.5)",
+  color = PRIMARY_COLOR,
   className,
 }: BackgroundGradient) => {
   return (

@@ -1,7 +1,7 @@
 [
   {
     "name": "Sann KoKo",
-    "link": "#",
+    "link": "https://www.linkedin.com/in/sannkoko",
     "avatarURL": "/assets/contributors/sann_ko_ko.jpeg",
     "position": "Project Manager",
     "contributedTo": "React Components | Tailwind Components | Landing Page"
@@ -29,8 +29,8 @@
   },
   {
     "name": "Paing Soe Ko",
-    "link": "#",
-    "avatarURL": null,
+    "link": "https://www.linkedin.com/in/paingsoeko",
+    "avatarURL": "/assets/contributors/paing_soe_ko.jpg",
     "position": "Web Developer",
     "contributedTo": "Tailwind Components"
   },

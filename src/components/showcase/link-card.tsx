@@ -8,6 +8,7 @@ type LinkCardProps = {
   href: string;
   label: string;
   cardContentClass?: string;
+  containerClass?: string;
   children: React.ReactNode;
 };
 
@@ -16,9 +17,14 @@ const LinkCard = ({
   label,
   children,
   cardContentClass,
+  containerClass,
 }: LinkCardProps) => {
   return (
-    <a href={href} target="_blank" className="relative col-span-1">
+    <a
+      href={href}
+      target="_blank"
+      className={cn("relative col-span-1", containerClass)}
+    >
       <Card
         className={
           "card_glow relative flex min-h-72 w-full items-center justify-center bg-background [mask:radial-gradient(75%_75%_at_50%,rgb(0,0,0)_60%,rgba(0,0,0,0)_100%)] sm:aspect-video sm:h-full sm:w-full"

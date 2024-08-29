@@ -8,6 +8,7 @@ const ShowcaseAlertDialog = () => {
       href="https://mijnui.com/docs/?path=/docs/components-alertdialog--docs"
       label="Alert Dialog"
       cardContentClass="p-11"
+      containerClass="hidden xl:block"
     >
       <div className="flex w-full max-w-lg flex-col gap-2 rounded-xl bg-white p-4 sm:p-6">
         <div>

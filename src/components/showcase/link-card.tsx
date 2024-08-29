@@ -15,18 +15,22 @@ const LinkCard = ({ href, label, children, className }: LinkCardProps) => {
   return (
     <a href={href} target="_blank" className="relative col-span-1">
       <Card
-        className={cn(
-          "card_glow relative flex min-h-72 w-full items-center justify-center bg-background [mask:radial-gradient(75%_75%_at_50%,rgb(0,0,0)_60%,rgba(0,0,0,0)_100%)] sm:aspect-video sm:h-full sm:w-full",
-          className,
-        )}
+        className={
+          "card_glow relative flex min-h-72 w-full items-center justify-center bg-background [mask:radial-gradient(75%_75%_at_50%,rgb(0,0,0)_60%,rgba(0,0,0,0)_100%)] sm:aspect-video sm:h-full sm:w-full"
+        }
         id="card"
       >
-        <div className="card_glow_content pointer-events-none p-10">
+        <div
+          className={cn(
+            "card_glow_content pointer-events-none p-10",
+            className,
+          )}
+        >
           {children}
         </div>
       </Card>
-      <div className="absolute left-0 top-0 p-2.5 sm:p-5">
-        <p className="bg-gradient-to-br from-black to-zinc-700 bg-clip-text text-sm text-transparent sm:text-base">
+      <div className="absolute left-0 top-0 p-2.5 sm:p-4">
+        <p className="bg-gradient-to-br from-black to-zinc-700 bg-clip-text text-sm text-transparent sm:text-sm">
           {label}
         </p>
       </div>

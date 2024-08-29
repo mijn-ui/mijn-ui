@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../mijn-ui/Button";
+
 import { Card } from "../mijn-ui/Card";
 import LinkCard from "./link-card";
 
@@ -11,31 +11,31 @@ const ShowcaseTabs = () => {
     >
       <div className="flex flex-col gap-2">
         <div className="flex items-center justify-center gap-1 whitespace-nowrap">
-          <Button
+          <button
             className={
-              "bg-card text-xs text-foreground hover:bg-card hover:text-card-foreground"
+              "rounded-md bg-card px-3 py-2 text-xs text-foreground hover:bg-card hover:text-card-foreground"
             }
           >
             Tab One
-          </Button>
-          <Button
+          </button>
+          <button
             className={
-              "bg-transparent text-xs text-muted-foreground hover:bg-card hover:text-card-foreground"
+              "rounded-md bg-transparent px-3 py-2 text-xs text-muted-foreground hover:bg-card hover:text-card-foreground"
             }
           >
             Tab Two
-          </Button>
-          <Button
+          </button>
+          <button
             className={
-              "bg-transparent text-xs text-muted-foreground hover:bg-card hover:text-card-foreground"
+              "rounded-md bg-transparent px-3 py-2 text-xs text-muted-foreground hover:bg-card hover:text-card-foreground"
             }
           >
             Tab Three
-          </Button>
+          </button>
         </div>
 
         <div className="h-32 w-full">
-          <Card className="flex h-full w-full items-center justify-center text-sm drop-shadow-sm">
+          <Card className="flex h-full w-full items-center justify-center text-xs drop-shadow-sm sm:text-sm">
             Tab One Content
           </Card>
         </div>

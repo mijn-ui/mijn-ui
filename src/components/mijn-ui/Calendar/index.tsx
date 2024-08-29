@@ -109,7 +109,7 @@ export default function Calendar({
           <LuChevronLeft className="h-4 w-4" aria-hidden="true" />
         </Button>
 
-        <h3 className="flex-1 text-center text-xs font-semibold text-foreground">
+        <h3 className="text-xxs flex-1 text-center font-semibold text-foreground">
           {format(firstDayCurrentMonth, "MMMM yyyy")}
         </h3>
 
@@ -117,25 +117,25 @@ export default function Calendar({
           size={"icon"}
           onClick={nextMonth}
           variant={"outline"}
-          className="h-6 w-6 rounded-default text-xs text-card-description"
+          className="text-xxs h-6 w-6 rounded-default text-card-description"
         >
           <span className="sr-only">Next month</span>
           <LuChevronRight className="h-4 w-4" aria-hidden="true" />
         </Button>
       </div>
 
-      <div className="grid grid-cols-7 text-center text-xs leading-6 text-gray-500">
+      <div className="text-xxs grid grid-cols-7 text-center leading-6 text-gray-500">
         {months.map((month) => (
           <div
             key={month}
-            className="flex h-7 w-7 items-center justify-center text-xs"
+            className="text-xxs flex h-7 w-7 items-center justify-center"
           >
             {month.slice(0, 2)}
           </div>
         ))}
       </div>
 
-      <div className="grid grid-cols-7 text-xs">
+      <div className="grid grid-cols-7">
         {days.map((day, dayIdx) => (
           <Button
             key={dayIdx}
@@ -143,13 +143,16 @@ export default function Calendar({
             size={"icon"}
             variant={"ghost"}
             onClick={() => handleDateSelect(day)}
-            className={getDateButtonClassNames(
-              day,
-              selectedDay,
-              firstDayCurrentMonth,
-              disabledDates,
-              minDate,
-              maxDate,
+            className={cn(
+              getDateButtonClassNames(
+                day,
+                selectedDay,
+                firstDayCurrentMonth,
+                disabledDates,
+                minDate,
+                maxDate,
+              ),
+              "text-xxs",
             )}
             disabled={
               (minDate && isBefore(day, minDate)) ||
@@ -176,8 +179,7 @@ const getDateButtonClassNames = (
   minDate?: Date,
   maxDate?: Date,
 ) => {
-  const baseClasses =
-    "mx-auto flex h-7 w-7 p-0 items-center justify-center text-xs";
+  const baseClasses = "mx-auto flex h-7 w-7 p-0 items-center justify-center";
 
   const isSelected = isEqual(day, selectedDay);
   const isCurrentDay = isToday(day);
@@ -191,7 +193,7 @@ const getDateButtonClassNames = (
     baseClasses,
     isSelected &&
       isWithinSameMonth &&
-      "text-white bg-primary hover:bg-primary hover:text-white",
+      "!text-primary-foreground bg-primary hover:bg-primary hover:text-white",
     isSelected &&
       !isCurrentDay &&
       !isWithinSameMonth &&

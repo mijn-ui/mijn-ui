@@ -40,14 +40,21 @@ const ShowcaseTable = () => {
     <LinkCard
       href="https://mijnui.com/docs/?path=/docs/components-table--docs"
       label="Table"
+      className="p-8"
     >
-      <div className="overflow-auto rounded-xl border border-border">
+      <div className="w-fit max-w-full overflow-hidden rounded-xl border border-border">
         <table className="relative text-sm">
           <thead className="h-8 bg-accent">
             <tr className="border-b border-border text-left">
-              <th className="px-3 py-2 text-xs font-semibold">Customer</th>
-              <th className="px-3 py-2 text-xs font-semibold">Total</th>
-              <th className="px-3 py-2 text-xs font-semibold">Status</th>
+              <th className="text-xxs px-2 py-1 font-semibold sm:px-3 sm:py-2 sm:text-xs">
+                Customer
+              </th>
+              <th className="text-xxs px-2 py-1 font-semibold sm:px-3 sm:py-2 sm:text-xs">
+                Total
+              </th>
+              <th className="text-xxs px-2 py-1 font-semibold sm:px-3 sm:py-2 sm:text-xs">
+                Status
+              </th>
               <th></th>
             </tr>
           </thead>
@@ -73,20 +80,22 @@ const RenderTableCell = ({ name, price, status }: TableDataType) => {
 
   return (
     <tr className="text-left">
-      <td className="block max-w-32 truncate px-3 py-2 align-middle text-xs">
+      <td className="text-xxs block max-w-32 truncate px-2 py-1 align-middle sm:px-3 sm:py-2 sm:text-xs">
         {name}
       </td>
-      <td className="px-3 py-2 align-middle text-xs">{price}</td>
-      <td className="px-3 py-2 align-middle text-xs">
-        <p className="flex items-center gap-2 text-xs text-neutral-700">
+      <td className="text-xxs px-2 py-1 align-middle sm:px-3 sm:py-2 sm:text-xs">
+        {price}
+      </td>
+      <td className="text-xxs px-2 py-1 align-middle sm:px-3 sm:py-2 sm:text-xs">
+        <p className="text-xxs flex items-center gap-2 text-neutral-700">
           <span
-            className={cn("block h-1.5 w-1.5 rounded-full ring", statusColor)}
+            className={cn("block h-1 w-1 rounded-full ring", statusColor)}
           ></span>
           <span>{status}</span>
         </p>
       </td>
 
-      <td className="px-3 py-2 align-middle text-sm">
+      <td className="text-xxs px-2 py-1 align-middle sm:px-3 sm:py-2 sm:text-xs">
         <LuMoreHorizontal />
       </td>
     </tr>

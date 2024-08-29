@@ -11,7 +11,7 @@ const ShowcaseKanban = () => {
     <div className="flex w-full items-center justify-between px-3 pr-2">
       <div className="flex items-center gap-1">
         <h3 className="text-sm font-medium">Todo</h3>
-        <span className="text-xxs flex h-4 w-4 items-center justify-center rounded-full bg-card font-medium text-card-foreground">
+        <span className="flex h-4 w-4 items-center justify-center rounded-full bg-card text-xxs font-medium text-card-foreground">
           3
         </span>
       </div>
@@ -27,12 +27,12 @@ const ShowcaseKanban = () => {
         Creating wireframes for iOS application
       </h5>
       <div className="flex flex-wrap">
-        <span className="text-xxs inline-flex items-center justify-center rounded-full border border-border px-1.5 py-px text-foreground hover:bg-accent">
+        <span className="inline-flex items-center justify-center rounded-full border border-border px-1.5 py-px text-xxs text-foreground hover:bg-accent">
           Wireframe
         </span>
       </div>
       <div className="space-y-1">
-        <div className="text-xxs flex items-center justify-between text-muted-foreground">
+        <div className="flex items-center justify-between text-xxs text-muted-foreground">
           <h5>CheckList</h5>
           <p>3/4</p>
         </div>
@@ -87,7 +87,7 @@ const ShowcaseKanban = () => {
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="text-xxs !ml-1.5 flex items-center justify-center text-muted-foreground">
+          <div className="!ml-1.5 flex items-center justify-center text-xxs text-muted-foreground">
             +3
           </div>
         </div>
@@ -108,9 +108,9 @@ const ShowcaseKanban = () => {
     <LinkCard
       href="https://mijnui.com/docs/?path=/docs/components-kanban--docs"
       label="Kanban"
-      className="p-9 pb-8"
+      cardContentClass="p-9 pb-8"
     >
-      <div className="bg-kanban-background relative w-full max-w-80 overflow-hidden rounded-2xl py-2">
+      <div className="relative w-full max-w-80 overflow-hidden rounded-2xl bg-kanban-background py-2">
         {KanbanHeader}
 
         <div className="px-3">{KanbanCard}</div>

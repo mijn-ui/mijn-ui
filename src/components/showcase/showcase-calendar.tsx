@@ -8,7 +8,7 @@ const ShowcaseCalendar = () => {
     <LinkCard
       href="https://mijnui.com/docs/?path=/docs/components-calendar--docs"
       label="Calendar"
-      className="p-10"
+      cardContentClass="p-10"
     >
       <Calendar className="max-h-full max-w-52 overflow-hidden p-2" />
     </LinkCard>

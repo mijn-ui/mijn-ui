@@ -40,19 +40,19 @@ const ShowcaseTable = () => {
     <LinkCard
       href="https://mijnui.com/docs/?path=/docs/components-table--docs"
       label="Table"
-      className="p-8"
+      cardContentClass="p-8"
     >
       <div className="w-fit max-w-full overflow-hidden rounded-xl border border-border">
         <table className="relative text-sm">
           <thead className="h-8 bg-accent">
             <tr className="border-b border-border text-left">
-              <th className="text-xxs px-2 py-1 font-semibold sm:px-3 sm:py-2 sm:text-xs">
+              <th className="px-2 py-1 text-xxs font-semibold sm:px-3 sm:py-2 sm:text-xs">
                 Customer
               </th>
-              <th className="text-xxs px-2 py-1 font-semibold sm:px-3 sm:py-2 sm:text-xs">
+              <th className="px-2 py-1 text-xxs font-semibold sm:px-3 sm:py-2 sm:text-xs">
                 Total
               </th>
-              <th className="text-xxs px-2 py-1 font-semibold sm:px-3 sm:py-2 sm:text-xs">
+              <th className="px-2 py-1 text-xxs font-semibold sm:px-3 sm:py-2 sm:text-xs">
                 Status
               </th>
               <th></th>
@@ -80,14 +80,14 @@ const RenderTableCell = ({ name, price, status }: TableDataType) => {
 
   return (
     <tr className="text-left">
-      <td className="text-xxs block max-w-32 truncate px-2 py-1 align-middle sm:px-3 sm:py-2 sm:text-xs">
+      <td className="block max-w-32 truncate px-2 py-1 align-middle text-xxs sm:px-3 sm:py-2 sm:text-xs">
         {name}
       </td>
-      <td className="text-xxs px-2 py-1 align-middle sm:px-3 sm:py-2 sm:text-xs">
+      <td className="px-2 py-1 align-middle text-xxs sm:px-3 sm:py-2 sm:text-xs">
         {price}
       </td>
-      <td className="text-xxs px-2 py-1 align-middle sm:px-3 sm:py-2 sm:text-xs">
-        <p className="text-xxs flex items-center gap-2 text-neutral-700">
+      <td className="px-2 py-1 align-middle text-xxs sm:px-3 sm:py-2 sm:text-xs">
+        <p className="flex items-center gap-2 text-xxs text-neutral-700">
           <span
             className={cn("block h-1 w-1 rounded-full ring", statusColor)}
           ></span>
@@ -95,7 +95,7 @@ const RenderTableCell = ({ name, price, status }: TableDataType) => {
         </p>
       </td>
 
-      <td className="text-xxs px-2 py-1 align-middle sm:px-3 sm:py-2 sm:text-xs">
+      <td className="px-2 py-1 align-middle text-xxs sm:px-3 sm:py-2 sm:text-xs">
         <LuMoreHorizontal />
       </td>
     </tr>

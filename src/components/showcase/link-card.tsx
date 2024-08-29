@@ -7,11 +7,16 @@ import { Card } from "../mijn-ui/Card";
 type LinkCardProps = {
   href: string;
   label: string;
-  className?: string;
+  cardContentClass?: string;
   children: React.ReactNode;
 };
 
-const LinkCard = ({ href, label, children, className }: LinkCardProps) => {
+const LinkCard = ({
+  href,
+  label,
+  children,
+  cardContentClass,
+}: LinkCardProps) => {
   return (
     <a href={href} target="_blank" className="relative col-span-1">
       <Card
@@ -23,7 +28,7 @@ const LinkCard = ({ href, label, children, className }: LinkCardProps) => {
         <div
           className={cn(
             "card_glow_content pointer-events-none p-10",
-            className,
+            cardContentClass,
           )}
         >
           {children}

@@ -7,7 +7,7 @@ const ShowcaseAlertDialog = () => {
     <LinkCard
       href="https://mijnui.com/docs/?path=/docs/components-alertdialog--docs"
       label="Alert Dialog"
-      className="p-11"
+      cardContentClass="p-11"
     >
       <div className="flex w-full max-w-lg flex-col gap-2 rounded-xl bg-white p-4 sm:p-6">
         <div>
@@ -21,10 +21,10 @@ const ShowcaseAlertDialog = () => {
         </div>
 
         <div className="flex items-center justify-end gap-2">
-          <button className="text-xxs rounded-md border border-border px-3 py-2 sm:text-xs">
+          <button className="rounded-md border border-border px-3 py-2 text-xxs sm:text-xs">
             Cancel
           </button>
-          <button className="text-xxs rounded-md bg-primary px-3 py-2 text-primary-foreground sm:text-xs">
+          <button className="rounded-md bg-primary px-3 py-2 text-xxs text-primary-foreground sm:text-xs">
             Continue
           </button>
         </div>

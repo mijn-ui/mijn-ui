@@ -8,6 +8,7 @@ import ShowcaseCalendarFull from "@/components/showcase/showcase-calendar-full";
 import ShowcaseComboBox from "@/components/showcase/showcase-combo-box";
 import ShowcaseKanban from "@/components/showcase/showcase-kanban";
 import ShowcaseProgress from "@/components/showcase/showcase-progress";
+import ShowcaseStepper from "@/components/showcase/showcase-stepper";
 import ShowcaseTable from "@/components/showcase/showcase-table";
 import ShowcaseTabs from "@/components/showcase/showcase-tabs";
 
@@ -50,7 +51,7 @@ const ShowcaseSection = () => {
         <ShowcaseComboBox />
         <ShowcaseKanban />
         <ShowcaseTable />
-        <ShowcaseProgress />
+        <ShowcaseStepper />
         <ShowcaseCalendarFull />
       </div>
     </section>

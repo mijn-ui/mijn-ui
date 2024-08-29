@@ -46,12 +46,12 @@ const ShowcaseSection = () => {
       >
         <ShowcaseTabs />
         <ShowcasePagination />
-        <ShowcaseAlertDialog />
+        <ShowcaseStepper />
         <ShowcaseCalendar />
         <ShowcaseComboBox />
+        <ShowcaseAlertDialog />
         <ShowcaseKanban />
         <ShowcaseTable />
-        <ShowcaseStepper />
         <ShowcaseCalendarFull />
       </div>
     </section>

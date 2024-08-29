@@ -7,7 +7,7 @@ import ShowcaseCalendar from "@/components/showcase/showcase-calendar";
 import ShowcaseCalendarFull from "@/components/showcase/showcase-calendar-full";
 import ShowcaseComboBox from "@/components/showcase/showcase-combo-box";
 import ShowcaseKanban from "@/components/showcase/showcase-kanban";
-import ShowcaseProgress from "@/components/showcase/showcase-progress";
+import ShowcasePagination from "@/components/showcase/showcase-progress";
 import ShowcaseStepper from "@/components/showcase/showcase-stepper";
 import ShowcaseTable from "@/components/showcase/showcase-table";
 import ShowcaseTabs from "@/components/showcase/showcase-tabs";
@@ -45,7 +45,7 @@ const ShowcaseSection = () => {
         id="cards"
       >
         <ShowcaseTabs />
-        <ShowcaseProgress />
+        <ShowcasePagination />
         <ShowcaseAlertDialog />
         <ShowcaseCalendar />
         <ShowcaseComboBox />

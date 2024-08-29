@@ -52,9 +52,16 @@ const config: Config = {
         disabled: "#E5E5E5",
         "disabled-foreground": "#a3a3a3",
 
+        "kanban-background": "#e2e8f0",
+        "kanban-secondary": "#cbd5e1",
+        "kanban-indicator": "#6b7280",
+
         "html-logo": "#e34c26",
         "react-logo": "#0058cc",
         "laravel-logo": "#F05340",
+      },
+      fontSize: {
+        xxs: "0.625rem",
       },
       borderRadius: {
         default: "0.25rem",

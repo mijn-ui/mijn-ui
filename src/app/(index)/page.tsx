@@ -5,7 +5,7 @@ import { FaHtml5, FaLaravel, FaReact } from "react-icons/fa";
 import BackgroundGradient from "@/components/decorators/background-gradient";
 import BorderGradient from "@/components/decorators/border-gradient";
 import GridGradient from "@/components/decorators/grid-gradient";
-import Footer from "@/components/footer";
+import Footer from "@/components/layout/footer";
 
 import CONTRIBUTORS from "../contributors/data.json";
 import ContributorSection from "./sections/contributor-section";

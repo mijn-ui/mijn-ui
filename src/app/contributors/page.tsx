@@ -4,7 +4,7 @@ import Image from "next/image";
 import { LuArrowLeft, LuChevronLeft, LuChevronRight } from "react-icons/lu";
 
 import GridGradient from "@/components/decorators/grid-gradient";
-import Footer from "@/components/footer";
+import Footer from "@/components/layout/footer";
 import StyledLink from "@/components/typography/link";
 import SubTitle from "@/components/typography/sub-title";
 

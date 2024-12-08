@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 import { FaHtml5, FaLaravel, FaReact } from "react-icons/fa";
@@ -11,12 +13,27 @@ import CONTRIBUTORS from "../contributors/data.json";
 import ContributorSection from "./sections/contributor-section";
 import LandingSection from "./sections/landing-section";
 import ShowcaseSection from "./sections/showcase-section";
+import { useTheme } from "next-themes";
 
 const Home = () => {
+  const { resolvedTheme } = useTheme();
+
   return (
     <div>
-      <BackgroundGradient />
-      <GridGradient />
+      <BackgroundGradient
+        color={
+          resolvedTheme === "dark"
+            ? "hsl(18,81.9%,65.3%,0.35)"
+            : "hsl(18,81.9%,65.3%,0.5)"
+        }
+      />
+      <GridGradient
+        color={
+          resolvedTheme === "dark"
+            ? "rgb(255 255 255 / 0.1)"
+            : "rgb(0 0 0 / 0.1)"
+        }
+      />
 
       <main className="flex w-full flex-col items-center justify-center">
         <LandingSection

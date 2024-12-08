@@ -12,49 +12,63 @@ const config: Config = {
         xs: "480px",
       },
       colors: {
-        background: "#F1F5F9",
-        foreground: "#000000",
+        main: {
+          DEFAULT: "hsl(var(--main) / <alpha-value>)",
+          text: "hsl(var(--main-text) / <alpha-value>)",
+          border: "hsl(var(--main-border) / <alpha-value>)",
+        },
+        surface: {
+          DEFAULT: "hsl(var(--surface) / <alpha-value>)",
+          text: "hsl(var(--surface-text) / <alpha-value>)",
+        },
 
-        card: "#FFFFFF",
-        "card-foreground": "#000000",
-        "card-description": "#737373",
+        muted: {
+          DEFAULT: "hsl(var(--muted) / <alpha-value>)",
+          text: "hsl(var(--muted-text) / <alpha-value>)",
+        },
 
-        popover: "#FFFFFF",
-        "popover-foreground": "#000000",
+        accent: {
+          DEFAULT: "hsl(var(--accent) / <alpha-value>)",
+          text: "hsl(var(--accent-text) / <alpha-value>)",
+        },
 
-        primary: "#F97316",
-        "primary-foreground": "#ffffff",
+        primary: {
+          DEFAULT: "hsl(var(--primary) / <alpha-value>)",
+          text: "hsl(var(--primary-text) / <alpha-value>)",
+        },
 
-        secondary: "#FED7AA",
-        "secondary-foreground": "#C2410C",
+        secondary: {
+          DEFAULT: "hsl(var(--secondary) / <alpha-value>)",
+          text: "hsl(var(--secondary-text) / <alpha-value>)",
+        },
 
-        accent: "#F5F5F5",
-        "accent-foreground": "#000000",
+        info: {
+          DEFAULT: "hsl(var(--info) / <alpha-value>)",
+          text: "hsl(var(--info-text) / <alpha-value>)",
+          "filled-text": "hsl(var(--info-filled-text) / <alpha-value>)",
+        },
 
-        muted: "#E5E5E5",
-        "muted-foreground": "#404040",
+        warning: {
+          DEFAULT: "hsl(var(--warning) / <alpha-value>)",
+          text: "hsl(var(--warning-text) / <alpha-value>)",
+          "filled-text": "hsl(var(--warning-filled-text) / <alpha-value>)",
+        },
 
-        danger: "#DC2626",
-        "danger-foreground": "#ffffff",
+        danger: {
+          DEFAULT: "hsl(var(--danger) / <alpha-value>)",
+          text: "hsl(var(--danger-text) / <alpha-value>)",
+          "filled-text": "hsl(var(--danger-filled-text) / <alpha-value>)",
+        },
 
-        border: "#D4D4D4",
+        success: {
+          DEFAULT: "hsl(var(--success) / <alpha-value>)",
+          text: "hsl(var(--success-text) / <alpha-value>)",
+          "filled-text": "hsl(var(--success-filled-text) / <alpha-value>)",
+        },
 
-        "ring-primary": "#F97316",
-        "ring-white": "#ffffff",
-
-        warning: "#EAB308",
-
-        success: "#16A34A",
-        "success-foreground": "#ffffff",
-
-        placeholder: "#737373",
-
-        disabled: "#E5E5E5",
-        "disabled-foreground": "#a3a3a3",
-
-        "kanban-background": "#e2e8f0",
-        "kanban-secondary": "#cbd5e1",
-        "kanban-indicator": "#6b7280",
+        kanban: "hsl(var(--kanban) / <alpha-value>)",
+        "input-border": "hsl(var(--input-border) / <alpha-value>)",
+        ring: "hsl(var(--ring) / <alpha-value>)",
 
         "html-logo": "#e34c26",
         "react-logo": "#0058cc",

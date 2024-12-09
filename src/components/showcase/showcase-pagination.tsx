@@ -1,6 +1,6 @@
 import React from "react"
 import LinkCard from "./link-card"
-import { LuChevronLeft, LuChevronRight, LuMoreHorizontal } from "react-icons/lu"
+import { LuChevronLeft, LuChevronRight, LuEllipsis } from "react-icons/lu"
 
 const ShowcasePagination = () => {
   return (
@@ -19,7 +19,7 @@ const ShowcasePagination = () => {
           aria-hidden="true"
           className="flex h-7 w-7 items-center justify-center text-sm"
         >
-          <LuMoreHorizontal />
+          <LuEllipsis />
         </span>
 
         <ul className="flex flex-row items-center gap-1">
@@ -44,7 +44,7 @@ const ShowcasePagination = () => {
           aria-hidden="true"
           className="flex h-7 w-7 items-center justify-center text-sm [&>svg]:h-3.5 [&>svg]:w-3.5 sm:[&>svg]:h-4 sm:[&>svg]:w-4"
         >
-          <LuMoreHorizontal />
+          <LuEllipsis />
         </span>
 
         <button className="inline-flex h-9 items-center justify-center gap-1 rounded-md px-2 py-1.5 text-sm font-medium hover:bg-accent hover:text-accent-text disabled:bg-muted disabled:text-muted-text sm:h-10">

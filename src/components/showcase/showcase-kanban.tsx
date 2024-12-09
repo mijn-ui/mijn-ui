@@ -2,7 +2,7 @@ import React from "react"
 import Image from "next/image"
 import LinkCard from "./link-card"
 import { GoClock } from "react-icons/go"
-import { LuMoreVertical, LuPlus } from "react-icons/lu"
+import { LuEllipsisVertical, LuPlus } from "react-icons/lu"
 
 const ShowcaseKanban = () => {
   const KanbanHeader = (
@@ -14,7 +14,7 @@ const ShowcaseKanban = () => {
         </span>
       </div>
       <button className="inline-flex h-7 w-7 items-center justify-center gap-1 rounded-full text-sm text-muted-text hover:bg-accent hover:text-main-text disabled:bg-muted disabled:text-muted-text">
-        <LuMoreVertical />
+        <LuEllipsisVertical />
       </button>
     </div>
   )

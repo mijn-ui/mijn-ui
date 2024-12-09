@@ -1,7 +1,7 @@
 import React from "react"
 import LinkCard from "./link-card"
 import { cn } from "@/utils"
-import { LuMoreHorizontal } from "react-icons/lu"
+import { LuEllipsis } from "react-icons/lu"
 
 type TableDataType = {
   name: string
@@ -93,7 +93,7 @@ const RenderTableCell = ({ name, price, status }: TableDataType) => {
       </td>
 
       <td className="px-2 py-1 align-middle text-xxs sm:px-3 sm:py-2 sm:text-xs">
-        <LuMoreHorizontal />
+        <LuEllipsis />
       </td>
     </tr>
   )

@@ -24,12 +24,12 @@ const Home = () => {
             {
               icon: <FaHtml5 size={18} className="text-html-logo" />,
               name: "HTML",
-              href: "https://mijn-ui-tailwind.vercel.app",
+              href: "https://mijn-ui.vercel.app/tailwind",
             },
             {
               icon: <FaReact size={18} className="text-react-logo" />,
               name: "React",
-              href: "https://mijn-ui.vercel.app",
+              href: "https://mijn-ui.vercel.app/react",
             },
             {
               icon: <FaLaravel size={18} className="text-laravel-logo" />,

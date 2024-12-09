@@ -4,7 +4,7 @@ import LinkCard from "./link-card"
 const ShowcaseAlertDialog = () => {
   return (
     <LinkCard
-      href="https://mijn-ui.vercel.app/docs/components/alert-dialog"
+      href="https://mijn-ui.vercel.app/react/docs/components/alert-dialog"
       label="Alert Dialog"
       cardContentClass="p-11"
       containerClass="hidden xl:block"

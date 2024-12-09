@@ -4,7 +4,7 @@ import LinkCard from "./link-card"
 const ShowcaseTabs = () => {
   return (
     <LinkCard
-      href="https://mijn-ui.vercel.app/docs/components/tabs"
+      href="https://mijn-ui.vercel.app/react/docs/components/tabs"
       label="Tabs"
     >
       <div className="flex flex-col gap-2">

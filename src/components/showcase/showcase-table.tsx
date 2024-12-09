@@ -35,7 +35,7 @@ const TABLE_DATA: TableDataType[] = [
 const ShowcaseTable = () => {
   return (
     <LinkCard
-      href="https://mijn-ui.vercel.app/docs/components/table"
+      href="https://mijn-ui.vercel.app/react/docs/components/table"
       label="Table"
       cardContentClass="p-8"
     >

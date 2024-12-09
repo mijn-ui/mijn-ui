@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@mijn-ui/react-badge':
+        specifier: ^0.0.6
+        version: 0.0.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.10)
       '@mijn-ui/react-button':
         specifier: ^0.0.8
         version: 0.0.8(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.10)
@@ -128,6 +131,12 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
+
+  '@mijn-ui/react-badge@0.0.6':
+    resolution: {integrity: sha512-mIbR7nuY2Ep7SCaTkDoxUjiZDgjFtkWzXqnNv0U6x+CFZXLq2+qQW8kmVlw+Br5KuSOFyKg52ZPn/bCW6iTWdQ==}
+    peerDependencies:
+      react: ^19.0
+      react-dom: ^19.0
 
   '@mijn-ui/react-button@0.0.8':
     resolution: {integrity: sha512-ZOmCqHY8M7nOkv5qAlD01pdELb3ljh8NUwdxP4Ixjl7rjM5WX9mNxi++PRAtKQ0tAZshFYzQJbpPKjd2DSMZSA==}
@@ -1737,6 +1746,15 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  '@mijn-ui/react-badge@0.0.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.10)':
+    dependencies:
+      '@mijn-ui/react-utilities': 0.0.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.10)
+      class-variance-authority: 0.7.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+    transitivePeerDependencies:
+      - tailwindcss
 
   '@mijn-ui/react-button@0.0.8(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.10)':
     dependencies:

@@ -1,11 +1,10 @@
-import React from "react";
-
-import { cn } from "@/utils";
+import React from "react"
+import { cn } from "@/utils"
 
 type FooterProps = {
-  text: string;
-  className?: string;
-};
+  text: string
+  className?: string
+}
 
 const Footer = ({ className, text }: FooterProps) => {
   return (
@@ -21,7 +20,7 @@ const Footer = ({ className, text }: FooterProps) => {
         </p>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

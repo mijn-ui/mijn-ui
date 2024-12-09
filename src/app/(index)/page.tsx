@@ -1,16 +1,13 @@
-import React from "react";
-
-import { FaHtml5, FaLaravel, FaReact } from "react-icons/fa";
-
-import BackgroundGradient from "@/components/decorators/background-gradient";
-import BorderGradient from "@/components/decorators/border-gradient";
-import GridGradient from "@/components/decorators/grid-gradient";
-import Footer from "@/components/layout/footer";
-
-import CONTRIBUTORS from "../contributors/data.json";
-import ContributorSection from "./sections/contributor-section";
-import LandingSection from "./sections/landing-section";
-import ShowcaseSection from "./sections/showcase-section";
+import React from "react"
+import BackgroundGradient from "@/components/decorators/background-gradient"
+import BorderGradient from "@/components/decorators/border-gradient"
+import GridGradient from "@/components/decorators/grid-gradient"
+import Footer from "@/components/layout/footer"
+import CONTRIBUTORS from "../contributors/data.json"
+import ContributorSection from "./sections/contributor-section"
+import LandingSection from "./sections/landing-section"
+import ShowcaseSection from "./sections/showcase-section"
+import { FaHtml5, FaLaravel, FaReact } from "react-icons/fa"
 
 const Home = () => {
   return (
@@ -57,7 +54,7 @@ const Home = () => {
 
       <Footer className="mt-20" text="All Right Reserved By MijnUI." />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

@@ -1,27 +1,27 @@
-"use client";
+"use client"
 
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import ThemeToggler from "../theme-toggler";
-import Logo from "../icons/logo";
-import { Badge } from "@mijn-ui/react-badge";
-import { cn } from "@/utils";
+import React, { useEffect, useState } from "react"
+import Link from "next/link"
+import { Badge } from "@mijn-ui/react-badge"
+import Logo from "../icons/logo"
+import ThemeToggler from "../theme-toggler"
+import { cn } from "@/utils"
 
 const Navbar = () => {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollHeight = window.scrollY;
-      setActive(scrollHeight > 5);
-    };
+      const scrollHeight = window.scrollY
+      setActive(scrollHeight > 5)
+    }
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll)
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   return (
     <header
@@ -53,8 +53,8 @@ const Navbar = () => {
       </nav>
       <TopRightRadialGradient />
     </header>
-  );
-};
+  )
+}
 
 const TopRightRadialGradient = ({
   className,
@@ -71,7 +71,7 @@ const TopRightRadialGradient = ({
       }}
       {...props}
     />
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

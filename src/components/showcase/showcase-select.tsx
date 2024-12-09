@@ -1,8 +1,6 @@
-import React from "react";
-
-import { LuCheck, LuChevronsUpDown } from "react-icons/lu";
-
-import LinkCard from "@/components/showcase/link-card";
+import React from "react"
+import LinkCard from "@/components/showcase/link-card"
+import { LuCheck, LuChevronsUpDown } from "react-icons/lu"
 
 const ShowcaseComboBox = () => {
   return (
@@ -37,7 +35,7 @@ const ShowcaseComboBox = () => {
         </ul>
       </div>
     </LinkCard>
-  );
-};
+  )
+}
 
-export default ShowcaseComboBox;
+export default ShowcaseComboBox

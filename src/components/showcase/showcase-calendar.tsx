@@ -1,5 +1,5 @@
-import React from "react";
-import LinkCard from "./link-card";
+import React from "react"
+import LinkCard from "./link-card"
 
 const ShowcaseCalendar = () => {
   return (
@@ -10,8 +10,8 @@ const ShowcaseCalendar = () => {
     >
       <Calendar />
     </LinkCard>
-  );
-};
+  )
+}
 
 const Calendar = () => {
   return (
@@ -571,7 +571,7 @@ const Calendar = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ShowcaseCalendar;
+export default ShowcaseCalendar

@@ -1,11 +1,10 @@
-import React from "react";
-
-import { cn } from "@/utils";
+import React from "react"
+import { cn } from "@/utils"
 
 type TitleProps = {
-  children: React.ReactNode;
-  className?: string;
-};
+  children: React.ReactNode
+  className?: string
+}
 
 const Title = ({ children, className }: TitleProps) => {
   return (
@@ -17,7 +16,7 @@ const Title = ({ children, className }: TitleProps) => {
     >
       {children}
     </h1>
-  );
-};
+  )
+}
 
-export default Title;
+export default Title

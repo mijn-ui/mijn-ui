@@ -1,5 +1,5 @@
-import { IconSvgProps } from "@/types";
-import { cn } from "@/utils";
+import { IconSvgProps } from "@/types"
+import { cn } from "@/utils"
 
 const GridGradient = ({ className, ...props }: IconSvgProps) => {
   return (
@@ -25,7 +25,7 @@ const GridGradient = ({ className, ...props }: IconSvgProps) => {
       </defs>
       <rect width="100%" height="100%" strokeWidth="0" fill="url(#hero)"></rect>
     </svg>
-  );
-};
+  )
+}
 
-export default GridGradient;
+export default GridGradient

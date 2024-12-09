@@ -1,6 +1,5 @@
-import React from "react";
-
-import LinkCard from "./link-card";
+import React from "react"
+import LinkCard from "./link-card"
 
 const ShowcaseStepper = () => {
   return (
@@ -55,7 +54,7 @@ const ShowcaseStepper = () => {
         </div>
       </div>
     </LinkCard>
-  );
-};
+  )
+}
 
-export default ShowcaseStepper;
+export default ShowcaseStepper

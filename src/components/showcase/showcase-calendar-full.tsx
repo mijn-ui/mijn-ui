@@ -1,6 +1,6 @@
-import React from "react";
-import LinkCard from "./link-card";
-import { IconSvgProps } from "@/types";
+import React from "react"
+import LinkCard from "./link-card"
+import { IconSvgProps } from "@/types"
 
 const ShowcaseCalendarFull = () => {
   return (
@@ -12,8 +12,8 @@ const ShowcaseCalendarFull = () => {
         <CalendarSvg className="h-full w-full" />
       </div>
     </LinkCard>
-  );
-};
+  )
+}
 
 function CalendarSvg(props: IconSvgProps) {
   return (
@@ -438,7 +438,7 @@ function CalendarSvg(props: IconSvgProps) {
         className="fill-accent"
       />
     </svg>
-  );
+  )
 }
 
-export default ShowcaseCalendarFull;
+export default ShowcaseCalendarFull

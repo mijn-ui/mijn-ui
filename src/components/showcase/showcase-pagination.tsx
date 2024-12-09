@@ -1,12 +1,6 @@
-import React from "react";
-
-import {
-  LuChevronLeft,
-  LuChevronRight,
-  LuMoreHorizontal,
-} from "react-icons/lu";
-
-import LinkCard from "./link-card";
+import React from "react"
+import LinkCard from "./link-card"
+import { LuChevronLeft, LuChevronRight, LuMoreHorizontal } from "react-icons/lu"
 
 const ShowcasePagination = () => {
   return (
@@ -59,7 +53,7 @@ const ShowcasePagination = () => {
         </button>
       </nav>
     </LinkCard>
-  );
-};
+  )
+}
 
-export default ShowcasePagination;
+export default ShowcasePagination

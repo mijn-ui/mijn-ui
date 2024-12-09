@@ -1,6 +1,5 @@
-import React from "react";
-
-import LinkCard from "./link-card";
+import React from "react"
+import LinkCard from "./link-card"
 
 const ShowcaseTabs = () => {
   return (
@@ -40,7 +39,7 @@ const ShowcaseTabs = () => {
         </div>
       </div>
     </LinkCard>
-  );
-};
+  )
+}
 
-export default ShowcaseTabs;
+export default ShowcaseTabs

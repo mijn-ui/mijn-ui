@@ -1,6 +1,5 @@
-import React, { ComponentProps } from "react";
-
-import { cn } from "@/utils";
+import React, { ComponentProps } from "react"
+import { cn } from "@/utils"
 
 const BorderGradient = ({ className, ...props }: ComponentProps<"div">) => {
   return (
@@ -11,7 +10,7 @@ const BorderGradient = ({ className, ...props }: ComponentProps<"div">) => {
       )}
       {...props}
     />
-  );
-};
+  )
+}
 
-export default BorderGradient;
+export default BorderGradient

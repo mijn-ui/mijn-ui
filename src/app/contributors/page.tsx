@@ -1,17 +1,14 @@
-"use client";
+"use client"
 
-import React from "react";
-
-import Image from "next/image";
-import { LuArrowLeft, LuChevronLeft, LuChevronRight } from "react-icons/lu";
-
-import GridGradient from "@/components/decorators/grid-gradient";
-import Footer from "@/components/layout/footer";
-import StyledLink from "@/components/typography/link";
-import SubTitle from "@/components/typography/sub-title";
-
-import CONTRIBUTORS from "./data.json";
-import BackgroundGradient from "@/components/decorators/background-gradient";
+import React from "react"
+import Image from "next/image"
+import BackgroundGradient from "@/components/decorators/background-gradient"
+import GridGradient from "@/components/decorators/grid-gradient"
+import Footer from "@/components/layout/footer"
+import StyledLink from "@/components/typography/link"
+import SubTitle from "@/components/typography/sub-title"
+import CONTRIBUTORS from "./data.json"
+import { LuArrowLeft, LuChevronLeft, LuChevronRight } from "react-icons/lu"
 
 const Contributors = () => {
   return (
@@ -44,12 +41,12 @@ const Contributors = () => {
         text="All Right Reserved By MijnUI."
       />
     </div>
-  );
-};
+  )
+}
 
-export default Contributors;
+export default Contributors
 
-type RenderContributorProps = (typeof CONTRIBUTORS)[number];
+type RenderContributorProps = (typeof CONTRIBUTORS)[number]
 
 const RenderContributor = ({
   name,
@@ -85,7 +82,7 @@ const RenderContributor = ({
       &#8226; {position}
     </p>
   </div>
-);
+)
 
 const Pagination = () => (
   <div className="flex items-center gap-2">
@@ -99,4 +96,4 @@ const Pagination = () => (
       <LuChevronRight size={20} />
     </button>
   </div>
-);
+)

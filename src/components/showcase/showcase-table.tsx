@@ -1,16 +1,13 @@
-import React from "react";
-
-import { LuMoreHorizontal } from "react-icons/lu";
-
-import { cn } from "@/utils";
-
-import LinkCard from "./link-card";
+import React from "react"
+import LinkCard from "./link-card"
+import { cn } from "@/utils"
+import { LuMoreHorizontal } from "react-icons/lu"
 
 type TableDataType = {
-  name: string;
-  price: string;
-  status: "Paid" | "Pending" | "Returned";
-};
+  name: string
+  price: string
+  status: "Paid" | "Pending" | "Returned"
+}
 
 const TABLE_DATA: TableDataType[] = [
   {
@@ -33,7 +30,7 @@ const TABLE_DATA: TableDataType[] = [
     price: "$1042.25",
     status: "Returned",
   },
-];
+]
 
 const ShowcaseTable = () => {
   return (
@@ -67,8 +64,8 @@ const ShowcaseTable = () => {
         </table>
       </div>
     </LinkCard>
-  );
-};
+  )
+}
 
 const RenderTableCell = ({ name, price, status }: TableDataType) => {
   const statusColor =
@@ -76,7 +73,7 @@ const RenderTableCell = ({ name, price, status }: TableDataType) => {
       ? "bg-green-500 ring-green-200"
       : status === "Pending"
         ? "bg-yellow-500 ring-yellow-200"
-        : "bg-red-500 ring-red-200";
+        : "bg-red-500 ring-red-200"
 
   return (
     <tr className="text-left">
@@ -99,7 +96,7 @@ const RenderTableCell = ({ name, price, status }: TableDataType) => {
         <LuMoreHorizontal />
       </td>
     </tr>
-  );
-};
+  )
+}
 
-export default ShowcaseTable;
+export default ShowcaseTable

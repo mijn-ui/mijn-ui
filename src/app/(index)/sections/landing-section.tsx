@@ -1,19 +1,18 @@
-import React from "react";
-
-import Title from "@/components/typography/title";
-import { Button } from "@mijn-ui/react-button";
-import Link from "next/link";
+import React from "react"
+import Link from "next/link"
+import { Button } from "@mijn-ui/react-button"
+import Title from "@/components/typography/title"
 
 type LandingSectionProps = {
-  title: string;
-  description: string;
-  mobileDescription: string;
+  title: string
+  description: string
+  mobileDescription: string
   builtFor: Array<{
-    icon: React.ReactNode;
-    name: string;
-    href?: string;
-  }>;
-};
+    icon: React.ReactNode
+    name: string
+    href?: string
+  }>
+}
 
 const LandingSection = ({
   title,
@@ -54,7 +53,7 @@ const LandingSection = ({
         ))}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default LandingSection;
+export default LandingSection

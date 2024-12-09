@@ -1,10 +1,8 @@
-import React from "react";
-
-import Image from "next/image";
-import { GoClock } from "react-icons/go";
-import { LuMoreVertical, LuPlus } from "react-icons/lu";
-
-import LinkCard from "./link-card";
+import React from "react"
+import Image from "next/image"
+import LinkCard from "./link-card"
+import { GoClock } from "react-icons/go"
+import { LuMoreVertical, LuPlus } from "react-icons/lu"
 
 const ShowcaseKanban = () => {
   const KanbanHeader = (
@@ -19,7 +17,7 @@ const ShowcaseKanban = () => {
         <LuMoreVertical />
       </button>
     </div>
-  );
+  )
 
   const KanbanCard = (
     <div className="group relative w-full cursor-pointer space-y-2 rounded-lg border border-transparent bg-surface p-3">
@@ -93,7 +91,7 @@ const ShowcaseKanban = () => {
         </div>
       </div>
     </div>
-  );
+  )
 
   const KanbanFooter = (
     <div className="relative flex items-center justify-between gap-4 px-4 py-2">
@@ -102,7 +100,7 @@ const ShowcaseKanban = () => {
         Add a new Item
       </button>
     </div>
-  );
+  )
 
   return (
     <LinkCard
@@ -118,8 +116,8 @@ const ShowcaseKanban = () => {
         {KanbanFooter}
       </div>
     </LinkCard>
-  );
-};
+  )
+}
 
 const CommentIcon = () => (
   <svg
@@ -143,6 +141,6 @@ const CommentIcon = () => (
       strokeLinecap="round"
     />
   </svg>
-);
+)
 
-export default ShowcaseKanban;
+export default ShowcaseKanban

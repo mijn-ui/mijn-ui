@@ -1,12 +1,12 @@
-import React from "react";
-import Link from "next/link";
-import { cn } from "@/utils";
+import React from "react"
+import Link from "next/link"
+import { cn } from "@/utils"
 
 type StyledLinkProps = {
-  children: React.ReactNode;
-  href: string;
-  className?: string;
-};
+  children: React.ReactNode
+  href: string
+  className?: string
+}
 
 const StyledLink = ({ children, href, className }: StyledLinkProps) => {
   return (
@@ -19,7 +19,7 @@ const StyledLink = ({ children, href, className }: StyledLinkProps) => {
     >
       {children}
     </Link>
-  );
-};
+  )
+}
 
-export default StyledLink;
+export default StyledLink

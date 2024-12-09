@@ -1,6 +1,5 @@
-import React from "react";
-
-import LinkCard from "./link-card";
+import React from "react"
+import LinkCard from "./link-card"
 
 const ShowcaseAlertDialog = () => {
   return (
@@ -31,7 +30,7 @@ const ShowcaseAlertDialog = () => {
         </div>
       </div>
     </LinkCard>
-  );
-};
+  )
+}
 
-export default ShowcaseAlertDialog;
+export default ShowcaseAlertDialog

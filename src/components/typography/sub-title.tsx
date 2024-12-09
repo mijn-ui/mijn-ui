@@ -1,10 +1,10 @@
-import { cn } from "@/utils";
-import React from "react";
+import React from "react"
+import { cn } from "@/utils"
 
 type SubTitleProps = {
-  children?: string;
-  className?: string;
-};
+  children?: string
+  className?: string
+}
 
 const SubTitle = ({ children, className }: SubTitleProps) => {
   return (
@@ -16,7 +16,7 @@ const SubTitle = ({ children, className }: SubTitleProps) => {
     >
       {children}
     </h3>
-  );
-};
+  )
+}
 
-export default SubTitle;
+export default SubTitle

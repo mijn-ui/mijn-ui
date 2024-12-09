@@ -1,17 +1,15 @@
-import React from "react";
-
-import { cn } from "@/utils";
-
-import Link from "next/link";
+import React from "react"
+import Link from "next/link"
+import { cn } from "@/utils"
 
 type LinkCardProps = {
-  href: string;
-  label: string;
-  inprogress?: boolean;
-  cardContentClass?: string;
-  containerClass?: string;
-  children: React.ReactNode;
-};
+  href: string
+  label: string
+  inprogress?: boolean
+  cardContentClass?: string
+  containerClass?: string
+  children: React.ReactNode
+}
 
 const LinkCard = ({
   href,
@@ -57,7 +55,7 @@ const LinkCard = ({
         </p>
       )}
     </Link>
-  );
-};
+  )
+}
 
-export default LinkCard;
+export default LinkCard

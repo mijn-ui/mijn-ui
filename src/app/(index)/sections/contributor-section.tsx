@@ -1,14 +1,12 @@
-import React from "react";
-
-import { LuArrowUpRight } from "react-icons/lu";
-
-import StyledLink from "@/components/typography/link";
-import Link from "next/link";
-import { Avatar, AvatarFallback, AvatarImage } from "@mijn-ui/react-avatar";
+import React from "react"
+import Link from "next/link"
+import { Avatar, AvatarFallback, AvatarImage } from "@mijn-ui/react-avatar"
+import StyledLink from "@/components/typography/link"
+import { LuArrowUpRight } from "react-icons/lu"
 
 type ContributorSectionProps = {
-  contributors: Contributor[];
-};
+  contributors: Contributor[]
+}
 
 const ContributorSection = ({ contributors }: ContributorSectionProps) => {
   return (
@@ -33,15 +31,15 @@ const ContributorSection = ({ contributors }: ContributorSectionProps) => {
         See More Info <LuArrowUpRight />
       </StyledLink>
     </section>
-  );
-};
+  )
+}
 
 type Contributor = {
-  link: string;
-  name: string;
-  avatarURL?: string;
-  position: string;
-};
+  link: string
+  name: string
+  avatarURL?: string
+  position: string
+}
 
 const Contributor = ({ link, name, avatarURL, position }: Contributor) => {
   return (
@@ -60,7 +58,7 @@ const Contributor = ({ link, name, avatarURL, position }: Contributor) => {
       </Link>
       <p className="text-xs text-muted-text">&#8226; {position}</p>
     </div>
-  );
-};
+  )
+}
 
-export default ContributorSection;
+export default ContributorSection

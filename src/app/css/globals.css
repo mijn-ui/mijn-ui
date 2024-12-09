@@ -21,7 +21,7 @@
     --primary: 29 100% 52%;
     --primary-text: 0 0% 100%;
 
-    --secondary: 33 35% 50%;
+    --secondary: 356 49% 55%;
     --secondary-text: 0 0% 100%;
 
     --info: 216 76% 52%;
@@ -50,21 +50,21 @@
 
   .dark {
     --main: 0 0% 4%;
-    --main-text: 0 0% 96%;
+    --main-text: 0 0% 94%;
 
     --surface: 0 0% 7%;
-    --surface-text: 0 0% 96%;
+    --surface-text: 0 0% 94%;
 
     --muted: 0 0% 15%;
     --muted-text: 0 0% 64%;
 
     --accent: 0 0% 12%;
-    --accent-text: 0 0% 96%;
+    --accent-text: 0 0% 94%;
 
     --primary: 29 100% 52%;
     --primary-text: 0 0% 100%;
 
-    --secondary: 33 35% 50%;
+    --secondary: 356 49% 55%;
     --secondary-text: 0 0% 100%;
 
     --info: 216 76% 52%;
@@ -87,7 +87,7 @@
     --input-border: 0 0% 96%;
     --radiu: 0.375rem;
 
-    --ring: 0 0% 96%;
+    --ring: 0 0% 80%;
     --kanban: 0 0% 15%;
   }
 

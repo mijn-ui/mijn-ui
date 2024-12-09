@@ -36,8 +36,8 @@ const Input: WithDisplayName<InputComponent> = forwardRef(
     return (
       <div
         className={cn(
-          "relative flex w-full items-center gap-1 rounded-md border border-border bg-card p-2.5 text-sm text-card-foreground focus-within:border-black focus-within:ring-1 focus-within:ring-black",
-          { "cursor-not-allowed text-card-description": disabled },
+          "text-surface-text bg-surface relative flex w-full items-center gap-1 rounded-md border border-border p-2.5 text-sm focus-within:border-black focus-within:ring-1 focus-within:ring-black",
+          { "text-muted-text cursor-not-allowed": disabled },
           className,
         )}
       >

@@ -1,25 +1,16 @@
-import React from "react";
+import React, { ComponentProps } from "react";
 
 import { cn } from "@/utils";
 
-type BackgroundGradient = {
-  color?: string;
-  className?: string;
-};
-
-const PRIMARY_COLOR = "hsl(18,81.9%,65.3%,0.5)";
-
-const BackgroundGradient = ({
-  color = PRIMARY_COLOR,
-  className,
-}: BackgroundGradient) => {
+const BackgroundGradient = ({ className, ...props }: ComponentProps<"div">) => {
   return (
     <div
-      className={cn("absolute inset-0 -z-10", className)}
-      style={{
-        backgroundImage: `radial-gradient(80% 60% at 50% -20%,${color},rgba(255,255,255,0))`,
-      }}
-    ></div>
+      className={cn(
+        "absolute inset-0 -z-10 bg-[radial-gradient(80%_60%_at_50%_-20%,hsl(18,81.9%,65.3%,0.5),rgba(255,255,255,0))] dark:bg-[radial-gradient(80%_60%_at_50%_-20%,hsl(18,81.9%,65.3%,0.25),rgba(255,255,255,0))]",
+        className,
+      )}
+      {...props}
+    />
   );
 };
 

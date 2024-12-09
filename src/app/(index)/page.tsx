@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 
 import { FaHtml5, FaLaravel, FaReact } from "react-icons/fa";
@@ -13,45 +11,34 @@ import CONTRIBUTORS from "../contributors/data.json";
 import ContributorSection from "./sections/contributor-section";
 import LandingSection from "./sections/landing-section";
 import ShowcaseSection from "./sections/showcase-section";
-import { useTheme } from "next-themes";
+import { cn } from "@/utils";
 
 const Home = () => {
-  const { resolvedTheme } = useTheme();
-
   return (
     <div>
-      <BackgroundGradient
-        color={
-          resolvedTheme === "dark"
-            ? "hsl(18,81.9%,65.3%,0.35)"
-            : "hsl(18,81.9%,65.3%,0.5)"
-        }
-      />
-      <GridGradient
-        color={
-          resolvedTheme === "dark"
-            ? "rgb(255 255 255 / 0.1)"
-            : "rgb(0 0 0 / 0.1)"
-        }
-      />
+      <BackgroundGradient />
+      <GridGradient className="stroke-main-text/10" />
 
       <main className="flex w-full flex-col items-center justify-center">
         <LandingSection
-          title="Reusable components that fit right into your projects."
+          title="Reusable components for clean, responsive interfaces."
           description="A new and evolving library of reusable components—built with simplicity at its core and aiming to become flexible, high-performance solution for projects of all sizes."
           mobileDescription="A new and evolving library of reusable components—built with simplicity at its core and aiming to become flexible."
           builtFor={[
             {
               icon: <FaHtml5 size={18} className="text-html-logo" />,
               name: "HTML",
+              href: "https://mijn-ui-tailwind.vercel.app",
             },
             {
               icon: <FaReact size={18} className="text-react-logo" />,
               name: "React",
+              href: "https://mijn-ui.vercel.app",
             },
             {
               icon: <FaLaravel size={18} className="text-laravel-logo" />,
               name: "Laravel",
+              href: "#",
             },
           ]}
         />
@@ -71,6 +58,24 @@ const Home = () => {
 
       <Footer className="mt-20" text="All Right Reserved By MijnUI." />
     </div>
+  );
+};
+
+const LeftRadialGradient = ({
+  className,
+  style,
+  ...props
+}: React.ComponentProps<"div">) => {
+  return (
+    <div
+      className={cn("absolute inset-0 -z-10", className)}
+      style={{
+        ...style,
+        backgroundImage:
+          "radial-gradient(50% 80% at 50% -20%, rgba(239, 138, 94, 0.1), rgba(255, 255, 255, 0))",
+      }}
+      {...props}
+    />
   );
 };
 

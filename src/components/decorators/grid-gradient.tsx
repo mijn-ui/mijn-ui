@@ -1,15 +1,7 @@
+import { IconSvgProps } from "@/types";
 import { cn } from "@/utils";
-import React from "react";
 
-type GridGradientProps = {
-  className?: string;
-  color?: string;
-};
-
-const GridGradient = ({
-  className,
-  color = "rgb(0 0 0 / 0.1)",
-}: GridGradientProps) => {
+const GridGradient = ({ className, ...props }: IconSvgProps) => {
   return (
     <svg
       className={cn(
@@ -17,9 +9,7 @@ const GridGradient = ({
         className,
       )}
       aria-hidden="true"
-      style={{
-        stroke: color,
-      }}
+      {...props}
     >
       <defs>
         <pattern

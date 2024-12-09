@@ -5,9 +5,9 @@ import React, { useEffect } from "react";
 import ShowcaseAlertDialog from "@/components/showcase/showcase-alert-dialog";
 import ShowcaseCalendar from "@/components/showcase/showcase-calendar";
 import ShowcaseCalendarFull from "@/components/showcase/showcase-calendar-full";
-import ShowcaseComboBox from "@/components/showcase/showcase-combo-box";
+import ShowcaseComboBox from "@/components/showcase/showcase-select";
 import ShowcaseKanban from "@/components/showcase/showcase-kanban";
-import ShowcasePagination from "@/components/showcase/showcase-progress";
+import ShowcasePagination from "@/components/showcase/showcase-pagination";
 import ShowcaseStepper from "@/components/showcase/showcase-stepper";
 import ShowcaseTable from "@/components/showcase/showcase-table";
 import ShowcaseTabs from "@/components/showcase/showcase-tabs";
@@ -39,7 +39,7 @@ const ShowcaseSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full max-w-lg rounded-3xl bg-white ring ring-black lg:max-w-screen-xl">
+    <section className="relative w-full max-w-lg rounded-3xl ring ring-muted-text lg:max-w-screen-xl">
       <div
         className="scroll_animation grid min-h-screen w-full grid-cols-1 p-0 sm:p-2 md:gap-2 lg:grid-cols-2 xl:grid-cols-3"
         id="cards"

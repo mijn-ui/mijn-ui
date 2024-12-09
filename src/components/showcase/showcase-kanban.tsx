@@ -11,28 +11,28 @@ const ShowcaseKanban = () => {
     <div className="flex w-full items-center justify-between px-3 pr-2">
       <div className="flex items-center gap-1">
         <h3 className="text-sm font-medium">Todo</h3>
-        <span className="flex h-4 w-4 items-center justify-center rounded-full bg-card text-xxs font-medium text-card-foreground">
+        <span className="flex h-4 w-4 items-center justify-center rounded-full bg-surface text-xxs font-medium text-surface-text">
           3
         </span>
       </div>
-      <button className="inline-flex h-7 w-7 items-center justify-center gap-1 rounded-full text-sm text-muted-foreground hover:bg-accent hover:text-foreground disabled:bg-disabled disabled:text-disabled-foreground">
+      <button className="inline-flex h-7 w-7 items-center justify-center gap-1 rounded-full text-sm text-muted-text hover:bg-accent hover:text-main-text disabled:bg-muted disabled:text-muted-text">
         <LuMoreVertical />
       </button>
     </div>
   );
 
   const KanbanCard = (
-    <div className="group relative w-full cursor-pointer space-y-2 rounded-lg border border-transparent bg-card p-3">
-      <h5 className="w-10/12 text-xs font-medium text-foreground">
+    <div className="group relative w-full cursor-pointer space-y-2 rounded-lg border border-transparent bg-surface p-3">
+      <h5 className="w-10/12 text-xs font-medium text-main-text">
         Creating wireframes for iOS application
       </h5>
       <div className="flex flex-wrap">
-        <span className="inline-flex items-center justify-center rounded-full border border-border px-1.5 py-px text-xxs text-foreground hover:bg-accent">
+        <span className="border-border inline-flex items-center justify-center rounded-full border px-1.5 py-px text-xxs text-main-text hover:bg-accent">
           Wireframe
         </span>
       </div>
       <div className="space-y-1">
-        <div className="flex items-center justify-between text-xxs text-muted-foreground">
+        <div className="flex items-center justify-between text-xxs text-muted-text">
           <h5>CheckList</h5>
           <p>3/4</p>
         </div>
@@ -50,7 +50,7 @@ const ShowcaseKanban = () => {
           />
         </div>
       </div>
-      <div className="flex w-full items-center justify-between text-muted-foreground">
+      <div className="flex w-full items-center justify-between text-muted-text">
         <div className="flex items-center gap-1.5 sm:gap-2.5">
           <div className="flex items-center gap-1 text-sm">
             <GoClock />
@@ -66,7 +66,7 @@ const ShowcaseKanban = () => {
           </div>
         </div>
         <div className="flex items-center justify-center -space-x-2">
-          <div className="relative flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-full bg-muted text-xs ring-1 ring-ring-white">
+          <div className="ring-ring-white relative flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-full bg-muted text-xs ring-1">
             <Image
               width={40}
               height={40}
@@ -75,10 +75,10 @@ const ShowcaseKanban = () => {
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="relative flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-full bg-muted text-xs ring-1 ring-ring-white">
+          <div className="ring-ring-white relative flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-full bg-muted text-xs ring-1">
             <span>S</span>
           </div>
-          <div className="relative flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-full bg-muted text-xs ring-1 ring-ring-white">
+          <div className="ring-ring-white relative flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-full bg-muted text-xs ring-1">
             <Image
               width={40}
               height={40}
@@ -87,7 +87,7 @@ const ShowcaseKanban = () => {
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="!ml-1.5 flex items-center justify-center text-xxs text-muted-foreground">
+          <div className="!ml-1.5 flex items-center justify-center text-xxs text-muted-text">
             +3
           </div>
         </div>
@@ -97,7 +97,7 @@ const ShowcaseKanban = () => {
 
   const KanbanFooter = (
     <div className="relative flex items-center justify-between gap-4 px-4 py-2">
-      <button className="flex items-center gap-2 text-xs text-muted-foreground">
+      <button className="flex items-center gap-2 text-xs text-muted-text">
         <LuPlus className="text-sm" />
         Add a new Item
       </button>
@@ -106,11 +106,11 @@ const ShowcaseKanban = () => {
 
   return (
     <LinkCard
-      href="https://mijnui.com/docs/?path=/docs/components-kanban--docs"
+      href="https://mijn-ui.vercel.app/blocks/kanban-column"
       label="Kanban"
       cardContentClass="p-9 pb-8"
     >
-      <div className="relative w-full max-w-80 overflow-hidden rounded-2xl bg-kanban-background py-2">
+      <div className="relative w-full max-w-80 overflow-hidden rounded-2xl bg-kanban py-2">
         {KanbanHeader}
 
         <div className="px-3">{KanbanCard}</div>

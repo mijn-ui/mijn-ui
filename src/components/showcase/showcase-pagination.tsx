@@ -11,11 +11,12 @@ import LinkCard from "./link-card";
 const ShowcasePagination = () => {
   return (
     <LinkCard
-      href="https://mijnui.com/docs/?path=/docs/components-pagination--docs"
+      href="https://mijn-ui.vercel.app/docs/components/pagination
+      "
       label="Pagination"
     >
       <nav className="flex max-w-60 items-center justify-center gap-2">
-        <button className="inline-flex h-9 items-center justify-center gap-1 rounded-md px-2 py-1.5 font-medium hover:bg-accent hover:text-accent-foreground disabled:bg-disabled disabled:text-disabled-foreground sm:h-10">
+        <button className="inline-flex h-9 items-center justify-center gap-1 rounded-md px-2 py-1.5 font-medium hover:bg-accent hover:text-accent-text disabled:bg-muted disabled:text-muted-text sm:h-10">
           <LuChevronLeft />
           <span className="hidden text-xs sm:inline">Previous</span>
         </button>
@@ -29,17 +30,17 @@ const ShowcasePagination = () => {
 
         <ul className="flex flex-row items-center gap-1">
           <li>
-            <button className="inline-flex h-9 w-9 items-center justify-center gap-1 rounded-md text-xs hover:bg-accent hover:text-accent-foreground disabled:bg-disabled disabled:text-disabled-foreground">
+            <button className="inline-flex h-9 w-9 items-center justify-center gap-1 rounded-md text-xs hover:bg-accent hover:text-accent-text disabled:bg-muted disabled:text-muted-text">
               6
             </button>
           </li>
           <li>
-            <button className="inline-flex h-9 w-9 items-center justify-center gap-1 rounded-md border border-border bg-card text-xs text-foreground hover:bg-accent disabled:bg-disabled disabled:text-disabled-foreground">
+            <button className="border-border inline-flex h-9 w-9 items-center justify-center gap-1 rounded-md border bg-surface text-xs text-main-text hover:bg-accent disabled:bg-muted disabled:text-muted-text">
               7
             </button>
           </li>
           <li>
-            <button className="inline-flex h-9 w-9 items-center justify-center gap-1 rounded-md text-xs hover:bg-accent hover:text-accent-foreground disabled:bg-disabled disabled:text-disabled-foreground">
+            <button className="inline-flex h-9 w-9 items-center justify-center gap-1 rounded-md text-xs hover:bg-accent hover:text-accent-text disabled:bg-muted disabled:text-muted-text">
               8
             </button>
           </li>
@@ -52,7 +53,7 @@ const ShowcasePagination = () => {
           <LuMoreHorizontal />
         </span>
 
-        <button className="inline-flex h-9 items-center justify-center gap-1 rounded-md px-2 py-1.5 text-sm font-medium hover:bg-accent hover:text-accent-foreground disabled:bg-disabled disabled:text-disabled-foreground sm:h-10">
+        <button className="inline-flex h-9 items-center justify-center gap-1 rounded-md px-2 py-1.5 text-sm font-medium hover:bg-accent hover:text-accent-text disabled:bg-muted disabled:text-muted-text sm:h-10">
           <span className="hidden text-xs sm:inline">Next</span>
           <LuChevronRight />
         </button>

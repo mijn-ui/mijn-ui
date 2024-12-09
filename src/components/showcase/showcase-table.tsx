@@ -38,14 +38,14 @@ const TABLE_DATA: TableDataType[] = [
 const ShowcaseTable = () => {
   return (
     <LinkCard
-      href="https://mijnui.com/docs/?path=/docs/components-table--docs"
+      href="https://mijn-ui.vercel.app/docs/components/table"
       label="Table"
       cardContentClass="p-8"
     >
-      <div className="w-fit max-w-full overflow-hidden rounded-xl border border-border">
+      <div className="border-border w-fit max-w-full overflow-hidden rounded-xl border">
         <table className="relative text-sm">
           <thead className="h-8 bg-accent">
-            <tr className="border-b border-border text-left">
+            <tr className="border-border border-b text-left">
               <th className="px-2 py-1 text-xxs font-semibold sm:px-3 sm:py-2 sm:text-xs">
                 Customer
               </th>
@@ -59,7 +59,7 @@ const ShowcaseTable = () => {
             </tr>
           </thead>
 
-          <tbody className="divide-y divide-border bg-card">
+          <tbody className="divide-border divide-y bg-surface">
             {TABLE_DATA.map((user) => (
               <RenderTableCell key={user.name} {...user} />
             ))}
@@ -87,7 +87,7 @@ const RenderTableCell = ({ name, price, status }: TableDataType) => {
         {price}
       </td>
       <td className="px-2 py-1 align-middle text-xxs sm:px-3 sm:py-2 sm:text-xs">
-        <p className="flex items-center gap-2 text-xxs text-neutral-700">
+        <p className="flex items-center gap-2 text-xxs text-muted-text">
           <span
             className={cn("block h-1 w-1 rounded-full ring", statusColor)}
           ></span>

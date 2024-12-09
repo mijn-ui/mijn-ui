@@ -7,7 +7,7 @@ const Card = forwardRef<HTMLDivElement, ComponentProps<"div">>(
     return (
       <div
         ref={ref}
-        className={cn("w-full space-y-2 rounded-lg bg-card p-4", className)}
+        className={cn("bg-surface w-full space-y-2 rounded-lg p-4", className)}
         {...props}
       />
     );
@@ -64,7 +64,7 @@ const CardDescription = forwardRef<HTMLDivElement, ComponentProps<"p">>(
   ({ className, ...props }, ref) => {
     return (
       <p
-        className={cn("text-sm font-medium text-card-description", className)}
+        className={cn("text-muted-text text-sm font-medium", className)}
         ref={ref}
         {...props}
       />

@@ -12,7 +12,7 @@ const StyledLink = ({ children, href, className }: StyledLinkProps) => {
   return (
     <Link
       className={cn(
-        "inline-flex items-center gap-1.5 text-sm text-blue-800 hover:text-blue-900 hover:underline",
+        "inline-flex items-center gap-1.5 text-sm text-secondary hover:text-secondary/70 hover:underline",
         className,
       )}
       href={href}

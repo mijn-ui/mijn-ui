@@ -1,20 +1,20 @@
 import React from "react";
 
-import { LuChevronsUpDown } from "react-icons/lu";
+import { LuCheck, LuChevronsUpDown } from "react-icons/lu";
 
 import LinkCard from "@/components/showcase/link-card";
 
 const ShowcaseComboBox = () => {
   return (
     <LinkCard
-      href="https://mijnui.com/docs/?path=/docs/components-comboBox--docs"
-      label="ComboBox"
+      href="https://mijn-ui.vercel.app/docs/components/select"
+      label="Select"
     >
       <div className="relative">
         <button
           type="button"
           className={
-            "inline-flex items-center justify-between gap-2 rounded-md border border-border bg-card py-2 pl-4 pr-3 text-xs font-medium text-foreground"
+            "border-border inline-flex items-center justify-between gap-2 rounded-md border bg-surface py-2 pl-4 pr-3 text-xs font-medium text-main-text"
           }
           aria-controls="combobox-options"
         >
@@ -22,9 +22,9 @@ const ShowcaseComboBox = () => {
           <LuChevronsUpDown className="flex-shrink-0" />
         </button>
 
-        <ul className="mt-1 flex w-full flex-col overflow-auto rounded-md border border-border bg-card py-1 text-xs font-normal text-card-foreground shadow-sm transition duration-100 ease-in">
-          <li className="inline-flex w-full cursor-pointer select-none items-center justify-between gap-2 rounded-default px-3 py-1.5 hover:bg-accent">
-            Apple
+        <ul className="border-border mt-1 flex w-full flex-col overflow-auto rounded-md border bg-surface p-1 py-1 text-xs font-normal text-surface-text shadow-sm transition duration-100 ease-in">
+          <li className="inline-flex w-full cursor-pointer select-none items-center justify-between gap-2 rounded-default bg-primary/20 px-3 py-1.5 text-primary">
+            Apple <LuCheck />
           </li>
 
           <li className="inline-flex w-full cursor-pointer select-none items-center justify-between gap-2 rounded-default px-3 py-1.5 hover:bg-accent">

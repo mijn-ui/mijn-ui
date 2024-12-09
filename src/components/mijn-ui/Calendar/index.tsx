@@ -103,13 +103,13 @@ export default function Calendar({
           size={"icon"}
           onClick={previousMonth}
           variant={"outline"}
-          className="h-6 w-6 rounded-default text-card-description"
+          className="text-muted-text h-6 w-6 rounded-default"
         >
           <span className="sr-only">Previous month</span>
           <LuChevronLeft className="h-4 w-4" aria-hidden="true" />
         </Button>
 
-        <h3 className="text-xxs flex-1 text-center font-semibold text-foreground">
+        <h3 className="text-main-text flex-1 text-center text-xxs font-semibold">
           {format(firstDayCurrentMonth, "MMMM yyyy")}
         </h3>
 
@@ -117,18 +117,18 @@ export default function Calendar({
           size={"icon"}
           onClick={nextMonth}
           variant={"outline"}
-          className="text-xxs h-6 w-6 rounded-default text-card-description"
+          className="text-muted-text h-6 w-6 rounded-default text-xxs"
         >
           <span className="sr-only">Next month</span>
           <LuChevronRight className="h-4 w-4" aria-hidden="true" />
         </Button>
       </div>
 
-      <div className="text-xxs grid grid-cols-7 text-center leading-6 text-gray-500">
+      <div className="grid grid-cols-7 text-center text-xxs leading-6 text-gray-500">
         {months.map((month) => (
           <div
             key={month}
-            className="text-xxs flex h-7 w-7 items-center justify-center"
+            className="flex h-7 w-7 items-center justify-center text-xxs"
           >
             {month.slice(0, 2)}
           </div>
@@ -193,14 +193,14 @@ const getDateButtonClassNames = (
     baseClasses,
     isSelected &&
       isWithinSameMonth &&
-      "!text-primary-foreground bg-primary hover:bg-primary hover:text-white",
+      "!text-primary-text bg-primary hover:bg-primary hover:text-white",
     isSelected &&
       !isCurrentDay &&
       !isWithinSameMonth &&
       "bg-accent text-gray-400",
     !isSelected && "hover:bg-accent",
     !isSelected && isCurrentDay && "text-primary hover:text-primary",
-    !isSelected && !isCurrentDay && isWithinSameMonth && "text-foreground",
+    !isSelected && !isCurrentDay && isWithinSameMonth && "text-main-text",
     !isSelected &&
       !isCurrentDay &&
       !isWithinSameMonth &&

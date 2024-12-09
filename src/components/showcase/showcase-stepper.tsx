@@ -4,50 +4,52 @@ import LinkCard from "./link-card";
 
 const ShowcaseStepper = () => {
   return (
-    <LinkCard
-      href="https://mijnui.com/docs/?path=/docs/upcomming-components-stepper--default"
-      label="Stepper"
-    >
+    <LinkCard href="#" inprogress label="Stepper">
       <div className="flex w-full max-w-60 flex-col">
-        <div className="stepper__main-container flex w-full flex-row flex-wrap justify-between">
-          <StepperButton active="true" completed="true">
-            <span className="text-md text-center font-medium">1</span>
-          </StepperButton>
+        <div className="flex w-full max-w-xl items-center justify-center gap-2">
+          {/* /* ------------------------------ Current Step ------------------------------ * / */}
+          <button className="flex size-6 flex-shrink-0 items-center justify-center rounded-full border border-main-text bg-main-text text-xs text-main">
+            1
+          </button>
 
-          <StepperButton current="true">
-            <span className="text-md text-center font-medium">2</span>
-          </StepperButton>
+          <div className="h-px w-full bg-main-border" />
 
-          <StepperButton>
-            <span className="text-md text-center font-medium">3</span>
-          </StepperButton>
+          <button className="flex size-6 flex-shrink-0 items-center justify-center rounded-full border border-main-text bg-surface text-xs">
+            2
+          </button>
+
+          <div className="h-px w-full bg-main-border" />
+
+          <button className="flex size-6 flex-shrink-0 items-center justify-center rounded-full border text-xs text-muted-text">
+            3
+          </button>
         </div>
       </div>
 
-      <div className="my-2 flex w-full max-w-60 flex-col items-center justify-center rounded-md bg-card p-2">
-        <p className="text-center text-xxs text-card-description">Step-2</p>
+      <div className="my-2 flex w-full max-w-60 flex-col items-center justify-center rounded-md bg-surface p-2">
+        <p className="text-center text-xxs text-main">Step-2</p>
         <input
           type="text"
-          className="w-full border-b px-2 py-1 text-xxs"
+          className="w-full rounded-md border bg-transparent px-2 py-1 text-xxs"
           placeholder="Name"
         />
 
         <input
           type="email"
-          className="mt-1.5 w-full border-b px-2 py-1 text-xxs"
+          className="mt-1.5 w-full rounded-md border bg-transparent px-2 py-1 text-xxs"
           placeholder="Email"
         />
 
         <input
           type="password"
-          className="mt-1.5 w-full border-b px-2 py-1 text-xxs"
+          className="mt-1.5 w-full rounded-md border bg-transparent px-2 py-1 text-xxs"
           placeholder="Password"
         />
         <div className="mt-2 flex w-full justify-end gap-1">
-          <button className="inline-flex items-center justify-center rounded-md border border-border px-2.5 py-1 text-xxs text-foreground hover:bg-secondary/90 disabled:bg-disabled disabled:text-disabled-foreground">
+          <button className="border-border inline-flex items-center justify-center rounded-md border px-2.5 py-1 text-xxs text-main-text hover:bg-secondary/90 disabled:bg-muted disabled:text-muted-text">
             Previous
           </button>
-          <button className="inline-flex items-center justify-center rounded-md bg-primary px-2.5 py-1 text-xxs text-primary-foreground hover:bg-primary/90 disabled:bg-disabled disabled:text-disabled-foreground">
+          <button className="inline-flex items-center justify-center rounded-md bg-primary px-2.5 py-1 text-xxs text-primary-text hover:bg-primary/90 disabled:bg-muted disabled:text-muted-text">
             Next
           </button>
         </div>
@@ -55,48 +57,5 @@ const ShowcaseStepper = () => {
     </LinkCard>
   );
 };
-
-type StepperButtonProps = {
-  completed?: "true" | "false";
-  active?: "true" | "false";
-  invalid?: "true" | "false";
-  clickable?: "true" | "false";
-  loading?: "true" | "false";
-  current?: "true" | "false";
-  children: React.ReactNode;
-};
-
-const StepperButton = ({
-  completed = "false",
-  active = "false",
-  invalid = "false",
-  clickable = "false",
-  current = "false",
-  loading = "false",
-  children,
-}: StepperButtonProps) => (
-  <div
-    aria-disabled="true"
-    className="stepper__horizontal-step data-[invalid=true]:[&:not(:last-child)]:after:bg-destructive relative flex items-center transition-all duration-200 [&:not(:last-child)]:flex-1 [&:not(:last-child)]:after:me-[8px] [&:not(:last-child)]:after:ms-[8px] [&:not(:last-child)]:after:h-[2px] [&:not(:last-child)]:after:flex-1 [&:not(:last-child)]:after:bg-border [&:not(:last-child)]:after:transition-all [&:not(:last-child)]:after:duration-200 [&:not(:last-child)]:after:content-[''] data-[completed=true]:[&:not(:last-child)]:after:bg-foreground"
-    data-completed={completed}
-    data-active={active}
-    data-invalid={invalid}
-    data-clickable={clickable}
-  >
-    <div className="stepper__horizontal-step-container flex items-center">
-      <button
-        className="stepper__step-button-container data-[invalid=true]:bg-destructive data-[invalid=true]:border-destructive data-[invalid=true]:text-destructive-foreground pointer-events-none flex h-[24px] w-[24px] items-center justify-center gap-1 rounded-full border border-border bg-neutral-50 p-0 text-xs text-foreground hover:bg-accent hover:text-accent-foreground disabled:bg-disabled disabled:text-disabled-foreground data-[clickable=true]:pointer-events-auto data-[active=true]:border-foreground data-[current=true]:border-foreground data-[active=true]:bg-foreground data-[current=true]:bg-neutral-50 data-[active=true]:text-primary-foreground"
-        type="button"
-        data-current={current}
-        data-invalid={invalid}
-        data-active={active}
-        data-clickable={clickable}
-        data-loading={loading}
-      >
-        {children}
-      </button>
-    </div>
-  </div>
-);
 
 export default ShowcaseStepper;

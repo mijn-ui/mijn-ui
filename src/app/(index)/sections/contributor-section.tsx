@@ -1,10 +1,10 @@
 import React from "react";
 
-import Image from "next/image";
 import { LuArrowUpRight } from "react-icons/lu";
 
 import StyledLink from "@/components/typography/link";
 import Link from "next/link";
+import { Avatar, AvatarFallback, AvatarImage } from "@mijn-ui/react-avatar";
 
 type ContributorSectionProps = {
   contributors: Contributor[];
@@ -39,20 +39,17 @@ const ContributorSection = ({ contributors }: ContributorSectionProps) => {
 type Contributor = {
   link: string;
   name: string;
-  avatarURL: string | null;
+  avatarURL?: string;
   position: string;
 };
 
 const Contributor = ({ link, name, avatarURL, position }: Contributor) => {
   return (
     <div className="flex min-w-40 flex-col items-center justify-center px-4 text-center">
-      <div className="relative flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-full bg-muted">
-        {avatarURL ? (
-          <Image src={avatarURL} alt={name} width={40} height={40} />
-        ) : (
-          <span>{name?.substring(0, 1)}</span>
-        )}
-      </div>
+      <Avatar size="md">
+        <AvatarImage src={avatarURL} alt="anthony" />
+        <AvatarFallback>{name?.substring(0, 1)}</AvatarFallback>
+      </Avatar>
 
       <Link
         href={link}

@@ -2,7 +2,6 @@ import React from "react";
 
 import { cn } from "@/utils";
 
-import { Card } from "../mijn-ui/Card";
 import Link from "next/link";
 
 type LinkCardProps = {

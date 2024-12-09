@@ -1,5 +1,4 @@
 import React from "react"
-import Link from "next/link"
 import { Button } from "@mijn-ui/react-button"
 import Title from "@/components/typography/title"
 
@@ -42,13 +41,10 @@ const LandingSection = ({
             className="relative text-xs"
             asChild
           >
-            <Link
-              href={href || "#"}
-              target={href !== "#" ? "_blank" : undefined}
-            >
+            <a href={href || "#"}>
               {icon}
               {name}
-            </Link>
+            </a>
           </Button>
         ))}
       </div>

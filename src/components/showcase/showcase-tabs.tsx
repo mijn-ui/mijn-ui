@@ -3,10 +3,7 @@ import LinkCard from "./link-card"
 
 const ShowcaseTabs = () => {
   return (
-    <LinkCard
-      href="https://mijn-ui.vercel.app/react/docs/components/tabs"
-      label="Tabs"
-    >
+    <LinkCard href="/react/docs/components/tabs" label="Tabs">
       <div className="flex flex-col gap-2">
         <div className="flex items-center justify-center gap-1 whitespace-nowrap">
           <button

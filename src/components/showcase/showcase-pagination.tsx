@@ -5,7 +5,7 @@ import { LuChevronLeft, LuChevronRight, LuEllipsis } from "react-icons/lu"
 const ShowcasePagination = () => {
   return (
     <LinkCard
-      href="https://mijn-ui.vercel.app/react/docs/components/pagination
+      href="/react/docs/components/pagination
       "
       label="Pagination"
     >

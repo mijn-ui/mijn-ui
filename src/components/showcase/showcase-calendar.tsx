@@ -4,7 +4,7 @@ import LinkCard from "./link-card"
 const ShowcaseCalendar = () => {
   return (
     <LinkCard
-      href="https://mijn-ui.vercel.app/react/docs/components/calendar"
+      href="/react/docs/components/calendar"
       label="Calendar"
       cardContentClass="p-10"
     >

@@ -122,7 +122,7 @@ const ShowcaseKanban = () => {
 
   return (
     <LinkCard
-      href="https://mijn-ui.vercel.app/react/blocks/kanban-column"
+      href="/react/blocks/kanban-column"
       label="Kanban"
       cardContentClass="p-9 pb-8"
     >

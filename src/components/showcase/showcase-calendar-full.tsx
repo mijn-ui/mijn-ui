@@ -4,10 +4,7 @@ import { IconSvgProps } from "@/types"
 
 const ShowcaseCalendarFull = () => {
   return (
-    <LinkCard
-      href="https://mijn-ui.vercel.app/react/blocks/calendar-full"
-      label="CalendarFull"
-    >
+    <LinkCard href="/react/blocks/calendar-full" label="CalendarFull">
       <div className="h-fit max-h-full w-fit rounded-md bg-surface p-2">
         <CalendarSvg className="h-full w-full" />
       </div>

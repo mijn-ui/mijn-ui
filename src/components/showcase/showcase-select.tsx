@@ -4,10 +4,7 @@ import { LuCheck, LuChevronsUpDown } from "react-icons/lu"
 
 const ShowcaseComboBox = () => {
   return (
-    <LinkCard
-      href="https://mijn-ui.vercel.app/react/docs/components/select"
-      label="Select"
-    >
+    <LinkCard href="/react/docs/components/select" label="Select">
       <div className="relative">
         <button
           type="button"

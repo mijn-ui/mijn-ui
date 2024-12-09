@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import Image from "next/image"
+import { Avatar, AvatarFallback, AvatarImage } from "@mijn-ui/react-avatar"
 import BackgroundGradient from "@/components/decorators/background-gradient"
 import GridGradient from "@/components/decorators/grid-gradient"
 import Footer from "@/components/layout/footer"
@@ -56,19 +56,10 @@ const RenderContributor = ({
   position,
 }: RenderContributorProps) => (
   <div className="relative flex flex-col items-center gap-4 px-4 py-3 text-center sm:flex-row sm:text-left">
-    <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-muted ring-1 ring-ring">
-      {avatarURL ? (
-        <Image
-          src={avatarURL}
-          alt={name}
-          width={120}
-          height={120}
-          className="h-full w-full object-cover"
-        />
-      ) : (
-        <span>{name.substring(0, 1)}</span>
-      )}
-    </div>
+    <Avatar>
+      <AvatarImage src={avatarURL} alt={name} />
+      <AvatarFallback>{name.substring(0, 1)}</AvatarFallback>
+    </Avatar>
 
     <div className="w-full">
       <a href={link} target="_blank" className="text-base hover:underline">

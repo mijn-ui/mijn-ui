@@ -1,5 +1,10 @@
 import React from "react"
-import Image from "next/image"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarGroup,
+  AvatarImage,
+} from "@mijn-ui/react-avatar"
 import LinkCard from "./link-card"
 import { GoClock } from "react-icons/go"
 import { LuEllipsisVertical, LuPlus } from "react-icons/lu"
@@ -63,32 +68,45 @@ const ShowcaseKanban = () => {
             <span className="text-xxs">5</span>
           </div>
         </div>
-        <div className="flex items-center justify-center -space-x-2">
-          <div className="ring-ring-white relative flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-full bg-muted text-xs ring-1">
-            <Image
+        <AvatarGroup max={3}>
+          <Avatar className="size-5">
+            <AvatarImage
               width={40}
               height={40}
               alt="avatar"
               src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXZhdGFyfGVufDB8fDB8fHww"
-              className="h-full w-full object-cover"
             />
-          </div>
-          <div className="ring-ring-white relative flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-full bg-muted text-xs ring-1">
-            <span>S</span>
-          </div>
-          <div className="ring-ring-white relative flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-full bg-muted text-xs ring-1">
-            <Image
+            <AvatarFallback>A</AvatarFallback>
+          </Avatar>
+
+          <Avatar className="size-5">
+            <AvatarImage width={40} height={40} alt="avatar" src="" />
+            <AvatarFallback>S</AvatarFallback>
+          </Avatar>
+
+          <Avatar className="size-5">
+            <AvatarImage
               width={40}
               height={40}
               alt="avatar"
               src="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D"
-              className="h-full w-full object-cover"
             />
-          </div>
-          <div className="!ml-1.5 flex items-center justify-center text-xxs text-muted-text">
-            +3
-          </div>
-        </div>
+            <AvatarFallback>A</AvatarFallback>
+          </Avatar>
+
+          <Avatar className="size-5">
+            <AvatarImage width={40} height={40} alt="avatar" src="" />
+            <AvatarFallback>S</AvatarFallback>
+          </Avatar>
+          <Avatar className="size-5">
+            <AvatarImage width={40} height={40} alt="avatar" src="" />
+            <AvatarFallback>S</AvatarFallback>
+          </Avatar>
+          <Avatar className="size-5">
+            <AvatarImage width={40} height={40} alt="avatar" src="" />
+            <AvatarFallback>S</AvatarFallback>
+          </Avatar>
+        </AvatarGroup>
       </div>
     </div>
   )

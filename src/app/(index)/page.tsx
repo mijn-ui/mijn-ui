@@ -11,7 +11,6 @@ import CONTRIBUTORS from "../contributors/data.json";
 import ContributorSection from "./sections/contributor-section";
 import LandingSection from "./sections/landing-section";
 import ShowcaseSection from "./sections/showcase-section";
-import { cn } from "@/utils";
 
 const Home = () => {
   return (
@@ -58,24 +57,6 @@ const Home = () => {
 
       <Footer className="mt-20" text="All Right Reserved By MijnUI." />
     </div>
-  );
-};
-
-const LeftRadialGradient = ({
-  className,
-  style,
-  ...props
-}: React.ComponentProps<"div">) => {
-  return (
-    <div
-      className={cn("absolute inset-0 -z-10", className)}
-      style={{
-        ...style,
-        backgroundImage:
-          "radial-gradient(50% 80% at 50% -20%, rgba(239, 138, 94, 0.1), rgba(255, 255, 255, 0))",
-      }}
-      {...props}
-    />
   );
 };
 

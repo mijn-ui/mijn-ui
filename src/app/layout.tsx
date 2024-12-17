@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"], fallback: ["sans serif"] })
 export const metadata = createMetadata({
   title: "MijnUI",
   description:
-    "An open-source library built with Radix Primitives and Tailwind CSS, offering customizable, unstyled components.",
+    "A new and evolving library of reusable components built for React, HTML and Laravel.",
   metadataBase: baseUrl,
 })
 

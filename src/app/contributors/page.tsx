@@ -17,7 +17,7 @@ const Contributors = () => {
       <BackgroundGradient />
 
       <main className="relative flex h-full max-h-max flex-col items-center px-5 pt-24 sm:pb-24 sm:pt-32">
-        <SubTitle>Contributors</SubTitle>
+        <SubTitle>Core Contributors</SubTitle>
 
         <div className="mt-10 w-full max-w-3xl overflow-y-auto rounded-3xl bg-surface/40 p-2.5 shadow-sm backdrop-blur-lg sm:p-5">
           <div className="space-y-10 sm:space-y-0">

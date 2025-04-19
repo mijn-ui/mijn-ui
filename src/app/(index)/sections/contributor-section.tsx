@@ -12,7 +12,7 @@ const ContributorSection = ({ contributors }: ContributorSectionProps) => {
   return (
     <section className="flex w-full flex-col items-center justify-center p-2 sm:p-5">
       <h3 className="bg-gradient-to-br from-main-text to-muted-text/70 bg-clip-text text-center text-2xl/[1.2] font-bold tracking-tight text-transparent sm:text-4xl/[1.2] sm:font-extrabold">
-        Contributors
+        Core Contributors
       </h3>
 
       <div className="mt-8 flex w-full flex-wrap items-center justify-center gap-x-5 gap-y-8 lg:gap-0 lg:divide-x lg:divide-gray-400">

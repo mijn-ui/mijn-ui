@@ -7,7 +7,8 @@ import CONTRIBUTORS from "../contributors/data.json"
 import ContributorSection from "./sections/contributor-section"
 import LandingSection from "./sections/landing-section"
 import ShowcaseSection from "./sections/showcase-section"
-import { FaHtml5, FaLaravel, FaReact } from "react-icons/fa"
+import { FaLaravel, FaReact } from "react-icons/fa"
+import { RiTailwindCssFill } from "react-icons/ri"
 
 const Home = () => {
   return (
@@ -22,8 +23,13 @@ const Home = () => {
           mobileDescription="A new and evolving library of reusable components—built with simplicity at its core and aiming to become flexible."
           builtFor={[
             {
-              icon: <FaHtml5 size={18} className="text-html-logo" />,
-              name: "HTML",
+              icon: (
+                <RiTailwindCssFill
+                  size={18}
+                  className="text-sky-600 dark:text-sky-500"
+                />
+              ),
+              name: "Tailwind",
               href: "/tailwind",
             },
             {

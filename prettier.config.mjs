@@ -2,6 +2,8 @@ export default {
   semi: false,
   printWidth: 80,
   singleQuote: false,
+  bracketsSameLine: true,
+  htmlWhitespaceSensitivity: "ignore",
   tabWidth: 2,
   importOrder: [
     "^(react/(.*)$)|^(react$)",

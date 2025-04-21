@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google"
 import Navbar from "@/components/layout/navbar"
-import "./css/globals.css"
+import "./globals.css"
 import { baseUrl, createMetadata } from "@/utils/metadata"
 import { ThemeProvider } from "next-themes"
 

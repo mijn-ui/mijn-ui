@@ -1,15 +1,9 @@
 import React from "react"
-import LinkCard from "./link-card"
 
 const ShowcaseAlertDialog = () => {
   return (
-    <LinkCard
-      href="/react/docs/components/alert-dialog"
-      label="Alert Dialog"
-      cardContentClass="p-11"
-      containerClass="hidden xl:block"
-    >
-      <div className="flex w-full max-w-lg flex-col gap-2 rounded-xl bg-surface p-4 shadow-md sm:p-6">
+    <div className="p-10">
+      <div className="flex w-full max-w-lg flex-col gap-2 rounded-xl bg-popover p-4 shadow-md sm:p-6">
         <div>
           <h5 className="text-sm font-semibold">
             Are you sure absolutely sure?
@@ -21,15 +15,21 @@ const ShowcaseAlertDialog = () => {
         </div>
 
         <div className="flex items-center justify-end gap-2">
-          <button className="border-border rounded-md border px-3 py-2 text-xxs sm:text-xs">
+          <button
+            tabIndex={-1}
+            className="rounded-md px-3 py-2 text-xxs sm:text-xs hover:bg-accent hover:text-accent-foreground"
+          >
             Cancel
           </button>
-          <button className="rounded-md bg-primary px-3 py-2 text-xxs text-primary-text sm:text-xs">
+          <button
+            tabIndex={-1}
+            className="rounded-md bg-primary px-3 py-2 text-xxs text-primary-foreground sm:text-xs"
+          >
             Continue
           </button>
         </div>
       </div>
-    </LinkCard>
+    </div>
   )
 }
 

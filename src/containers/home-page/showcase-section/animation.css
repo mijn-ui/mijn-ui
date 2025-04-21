@@ -47,7 +47,7 @@
 .card_glow::before {
   background: radial-gradient(
     600px circle at var(--mouse-x) var(--mouse-y),
-    hsl(var(--primary) / 0.075),
+    hsl(var(--mijnui-primary) / 0.125),
     transparent 40%
   );
   z-index: 3;
@@ -56,10 +56,30 @@
 .card_glow::after {
   background: radial-gradient(
     400px circle at var(--mouse-x) var(--mouse-y),
-    hsl(var(--primary) / 0.1),
+    hsl(var(--mijnui-primary) / 0.95),
     transparent 40%
   );
   z-index: 1;
+}
+
+.dark {
+  .card_glow::before {
+    background: radial-gradient(
+      600px circle at var(--mouse-x) var(--mouse-y),
+      hsl(var(--mijnui-primary) / 0.075),
+      transparent 40%
+    );
+    z-index: 3;
+  }
+
+  .card_glow::after {
+    background: radial-gradient(
+      400px circle at var(--mouse-x) var(--mouse-y),
+      hsl(var(--mijnui-primary) / 0.95),
+      transparent 40%
+    );
+    z-index: 1;
+  }
 }
 
 .card_glow > .card_glow_content {

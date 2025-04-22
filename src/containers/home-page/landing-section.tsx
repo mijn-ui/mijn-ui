@@ -25,7 +25,7 @@ const LandingSection = () => {
 
         <div className="relative flex items-center gap-2 mt-6">
           <Button color="primary" asChild>
-            <a href="/tailwind">Get Started</a>
+            <a href="#get-started">Get Started</a>
           </Button>
 
           <Button variant={"outlined"} asChild>

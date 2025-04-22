@@ -14,8 +14,8 @@ const Navbar = () => {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 flex h-14 w-full origin-left items-center justify-center transition-all duration-300 ease-in-out",
-        { "border-b bg-background/10 backdrop-blur": active },
+        "fixed inset-x-0 top-0 z-50 flex h-14 w-full border-b border-b-transparent origin-left items-center justify-center",
+        { "border-b-border bg-background/10 backdrop-blur": active },
       )}
     >
       <nav className="flex w-full max-w-screen-2xl items-center justify-between px-5 py-2">
@@ -35,7 +35,21 @@ const Navbar = () => {
           </Badge>
         </div>
 
-        <ThemeToggler variant="ghost" radius="full" size="sm" />
+        <div className="flex items-center gap-4">
+          <a
+            href={"#templates-and-blocks"}
+            className="text-sm text-muted-foreground hover:text-foreground"
+          >
+            Templates & Blocks
+          </a>
+          <a
+            href={"#contributors"}
+            className="text-sm text-muted-foreground hover:text-foreground"
+          >
+            Contributors
+          </a>
+          <ThemeToggler variant="ghost" radius="full" size="sm" />
+        </div>
       </nav>
       <TopRightRadialGradient />
     </header>

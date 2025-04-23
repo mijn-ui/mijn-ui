@@ -42,14 +42,14 @@ const ComponentSection = () => {
     <section
       id="get-started"
       className={cn(
-        "relative w-full bg-[#f9fafb] dark:bg-[#0c0c0c] px-5 sm:px-10 overflow-x-hidden flex justify-center pb-24 md:pb-48 flex-col items-center ease-in-out md:pt-14 transition",
-        active ? "opacity-100" : "opacity-50 blur-[0.5px]",
+        "relative w-full h-full opacity-100 bg-[#f9fafb] dark:bg-[#0c0c0c] px-5 sm:px-10 flex justify-center pb-12 sm:pb-24 md:pb-32 flex-col items-center ease-in-out md:pt-14 transition overflow-hidden",
+        !active && "opacity-50 blur-[0.5px]",
       )}
     >
       <div
         className={cn(
           "w-full max-w-screen-xl transition ease-in-out flex justify-center",
-          active ? "scale-100" : "scale-[0.98]",
+          !active && "scale-[0.98]",
         )}
       >
         <Tabs unstyled defaultValue="tailwind">
@@ -82,13 +82,13 @@ const ComponentSection = () => {
             })}
           </TabsList>
 
-          <div className="relative w-full max-w-lg lg:max-w-screen-xl">
+          <div className="relative w-full lg:max-w-screen-xl">
             {Showcases.map((showcase) => (
               <TabsContent
                 key={showcase.group}
                 value={showcase.group}
                 tabIndex={-1}
-                className="relative grid w-full h-full grid-cols-1 md:gap-1 lg:grid-cols-2 xl:grid-cols-3"
+                className="relative grid w-full h-full grid-cols-1 md:gap-1 md:grid-cols-2 lg:grid-cols-3"
                 id="cards"
               >
                 {showcase.items.map((item, index) => (
@@ -121,8 +121,8 @@ const ComponentSection = () => {
 
 const BorderDecorator = () => (
   <div className="pointer-events-none absolute inset-0 sm:right-px">
-    <div className="absolute -inset-y-16 -left-px w-px">
-      <div className="absolute -inset-y-16 left-px w-px opacity-35 dark:opacity-15">
+    <div className="absolute -inset-y-12 lg:-inset-y-16 -left-px w-px">
+      <div className="absolute -inset-y-12 lg:-inset-y-16 left-px w-px opacity-35 dark:opacity-15">
         <svg className="size-full" preserveAspectRatio="none">
           <line
             x1={0}
@@ -136,7 +136,7 @@ const BorderDecorator = () => (
         </svg>
       </div>
     </div>
-    <div className="absolute -inset-x-20 -top-[38px] h-px">
+    <div className="absolute -inset-x-20 -top-[36px] h-px">
       <div className="absolute -inset-x-20 top-px h-px opacity-35 dark:opacity-15">
         <svg className="size-full" preserveAspectRatio="none">
           <line
@@ -196,8 +196,8 @@ const BorderDecorator = () => (
         </svg>
       </div>
     </div>
-    <div className="absolute -inset-y-16 -right-px w-px">
-      <div className="absolute -inset-y-16 w-px opacity-35 dark:opacity-15">
+    <div className="absolute -inset-y-12 lg:-inset-y-16 -right-px w-px">
+      <div className="absolute -inset-y-12 lg:-inset-y-16 w-px opacity-35 dark:opacity-15">
         <svg className="size-full" preserveAspectRatio="none">
           <line
             x1={0}

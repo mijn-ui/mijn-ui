@@ -1,6 +1,7 @@
 import React from "react"
-import BackgroundGradient from "@/components/decorators/background-gradient"
-import GridGradient from "@/components/decorators/grid-gradient"
+import TopBackgroundGradient from "@/components/decorators/background-gradient"
+import BorderGradient from "@/components/decorators/border-gradient"
+import TopGridGradient from "@/components/decorators/grid-gradient"
 import Footer from "@/components/layout/footer"
 import ContributorSection from "./contributor-section"
 import LandingSection from "./landing-section"
@@ -9,31 +10,42 @@ import ComponentSection from "@/containers/home-page/component-section"
 
 const Homepage = () => {
   return (
-    <div>
-      <BackgroundGradient />
-      <GridGradient className="stroke-foreground/10" />
+    <>
+      <TopBackgroundGradient />
+      <TopGridGradient className="stroke-foreground/10" />
 
       <main>
-        <LandingSection />
+        <div
+          id="hero"
+          className="px-5 flex w-full justify-center pt-32 sm:px-8 sm:pt-44 md:px-10 md:pt-60"
+        >
+          <LandingSection />
+        </div>
 
-        <div className="mt-[clamp(120px,15vw,240px)] flex w-full items-center justify-center">
+        <div id="get-started" className="mt-[clamp(120px,15vw,240px)]">
           <ComponentSection />
         </div>
 
-        <div className="w-full flex flex-col items-center mt-[clamp(80px,12vw,80px)]">
-          <div className="my-8 mb-14 w-full max-w-screen-xl">
-            <TemplateSection />
-          </div>
-          <div className="relative flex w-full max-w-screen-xl mt-[clamp(80px,12vw,80px)] flex-col items-center justify-center">
-            <div className="my-8 mb-14 w-full">
-              <ContributorSection />
-            </div>
-          </div>
+        <div
+          id="templates-and-blocks"
+          className="w-full flex items-center justify-center px-8"
+        >
+          <TemplateSection />
+        </div>
+
+        <div
+          id="contributors"
+          className="w-full relative py-20 flex items-center justify-center flex-col gap-12"
+        >
+          <BorderGradient className="max-w-2xl" />
+          <ContributorSection />
         </div>
       </main>
 
-      <Footer className="mt-20" />
-    </div>
+      <div>
+        <Footer />
+      </div>
+    </>
   )
 }
 

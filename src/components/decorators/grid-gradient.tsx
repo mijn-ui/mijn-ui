@@ -1,7 +1,7 @@
 import { IconSvgProps } from "@/types"
 import { cn } from "@/utils"
 
-const GridGradient = ({ className, ...props }: IconSvgProps) => {
+const TopGridGradient = ({ className, ...props }: IconSvgProps) => {
   return (
     <svg
       className={cn(
@@ -28,4 +28,4 @@ const GridGradient = ({ className, ...props }: IconSvgProps) => {
   )
 }
 
-export default GridGradient
+export default TopGridGradient

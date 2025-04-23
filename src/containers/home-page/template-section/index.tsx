@@ -19,21 +19,23 @@ import { LuArrowRight, LuExternalLink } from "react-icons/lu"
 
 const TemplateSection = () => {
   return (
-    <section id="templates-and-blocks">
-      <h3 className="bg-gradient-to-br from-foreground to-muted-foreground/70 bg-clip-text text-2xl/[1.2] font-bold tracking-tight text-transparent sm:text-4xl/[1.2] sm:font-extrabold">
+    <section className="pb-14 pt-16 md:pt-32 w-full max-w-screen-xl">
+      <h3 className="bg-gradient-to-br from-foreground to-muted-foreground/70 bg-clip-text text-3xl/[1.2] font-bold tracking-tight text-transparent sm:text-4xl/[1.2] sm:font-extrabold lg:text-start text-center">
         Templates & Blocks
       </h3>
-      <div className="w-full mt-10 grid grid-cols-3 gap-4">
-        {Templates.map((template) => (
-          <TemplateCard key={template.id} template={template} />
-        ))}
-      </div>
-      <div className="w-full flex items-center justify-center mt-10">
-        <Button asChild color="primary" size="lg" className="text-sm">
-          <Link href={"/templates"}>
-            Browse All <LuArrowRight className="mt-0.5" />
-          </Link>
-        </Button>
+      <div className="flex items-center justify-center flex-col">
+        <div className="w-fit mt-10 grid grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {Templates.map((template) => (
+            <TemplateCard key={template.id} template={template} />
+          ))}
+        </div>
+        <div className="w-full flex items-center justify-center mt-10">
+          <Button asChild color="primary" size="lg" className="text-sm">
+            <Link href={"/templates"}>
+              Browse All <LuArrowRight className="mt-0.5" />
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
   )
@@ -47,7 +49,7 @@ const TemplateCard = ({ template }: TemplateCardProps) => {
   const Icon = Icons[template.technology as keyof typeof Icons]
 
   return (
-    <Card className="w-full rounded-2xl flex flex-col">
+    <Card className="w-full rounded-2xl max-w-96 lg:max-w-none flex flex-col">
       <CardHeader>
         <Link
           href={template.previewURL}

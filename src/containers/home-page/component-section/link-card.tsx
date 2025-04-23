@@ -24,7 +24,7 @@ const LinkCard = ({
       href={href}
       target={href !== "#" ? "_blank" : undefined}
       className={cn(
-        "relative col-span-1 outline-none focus-visible:ring-2 ring-offset-2 ring-offset-background ring-ring",
+        "relative outline-none focus-visible:ring-2 ring-offset-2 ring-offset-background ring-ring",
         inprogress && "pointer-events-none",
         containerClass,
       )}

@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google"
 import Navbar from "@/components/layout/navbar"
+import { TailwindIndicator } from "@/components/tailwind-indicator"
 import "./globals.css"
 import { baseUrl, createMetadata } from "@/utils/metadata"
 import { ThemeProvider } from "next-themes"
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
+          <TailwindIndicator />
           {children}
         </ThemeProvider>
       </body>

@@ -1,7 +1,10 @@
 import React, { ComponentProps } from "react"
 import { cn } from "@/utils"
 
-const BackgroundGradient = ({ className, ...props }: ComponentProps<"div">) => {
+const TopBackgroundGradient = ({
+  className,
+  ...props
+}: ComponentProps<"div">) => {
   return (
     <div
       className={cn(
@@ -13,4 +16,4 @@ const BackgroundGradient = ({ className, ...props }: ComponentProps<"div">) => {
   )
 }
 
-export default BackgroundGradient
+export default TopBackgroundGradient

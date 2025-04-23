@@ -29,11 +29,6 @@ const CORE_CONTRIBUTORS = [
     link: "https://github.com/sannkoko",
   },
   {
-    id: "2",
-    name: "Hein Htoo Htoo Kyaw",
-    link: "#",
-  },
-  {
     id: "3",
     name: "kyawsaw",
     link: "https://github.com/kyawsaw",

@@ -43,13 +43,13 @@ const ComponentSection = () => {
       id="get-started"
       className={cn(
         "relative w-full h-full opacity-100 bg-[#f9fafb] dark:bg-[#0c0c0c] px-5 sm:px-10 flex justify-center pb-12 sm:pb-24 md:pb-32 flex-col items-center ease-in-out md:pt-14 transition overflow-hidden",
-        !active && "opacity-50 blur-[0.5px]",
+        !active && "md:opacity-50 md:blur-[0.5px]",
       )}
     >
       <div
         className={cn(
           "w-full max-w-screen-xl transition ease-in-out flex justify-center",
-          !active && "scale-[0.98]",
+          !active && "md:scale-[0.98]",
         )}
       >
         <Tabs unstyled defaultValue="tailwind">

@@ -49,7 +49,7 @@ const Contributor = ({
     <div
       className={cn(
         "flex flex-col items-center justify-center text-center",
-        totalContributors < 14 && "w-28",
+        totalContributors < 14 && "sm:w-28",
       )}
     >
       <Avatar

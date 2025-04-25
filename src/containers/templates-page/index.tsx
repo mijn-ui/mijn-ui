@@ -1,5 +1,6 @@
 "use client"
 
+import { Suspense } from "react"
 import Link from "next/link"
 import { Title } from "@/components/ui/typography"
 import Footer from "@/components/layout/footer"
@@ -39,7 +40,15 @@ const TemplatePage = () => {
             environments yet.
           </p>
 
-          <TemplateShowcase />
+          <Suspense
+            fallback={
+              <div className="py-8 px-5">
+                <div>Loading...</div>
+              </div>
+            }
+          >
+            <TemplateShowcase />
+          </Suspense>
         </div>
       </main>
       <Footer />

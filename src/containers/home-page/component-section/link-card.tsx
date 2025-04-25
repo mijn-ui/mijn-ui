@@ -1,5 +1,4 @@
 import React from "react"
-import Link from "next/link"
 import { cn } from "@/utils"
 
 type LinkCardProps = {
@@ -20,7 +19,7 @@ const LinkCard = ({
   inprogress,
 }: LinkCardProps) => {
   return (
-    <Link
+    <a
       href={href}
       target={href !== "#" ? "_blank" : undefined}
       className={cn(
@@ -56,7 +55,7 @@ const LinkCard = ({
           Under Development
         </p>
       )}
-    </Link>
+    </a>
   )
 }
 

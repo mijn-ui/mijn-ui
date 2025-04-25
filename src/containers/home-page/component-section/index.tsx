@@ -4,7 +4,7 @@ import React, { Suspense, useEffect } from "react"
 import { Button } from "@mijn-ui/react-button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@mijn-ui/react-tabs"
 import { cn } from "@mijn-ui/react-theme"
-import { Icons } from "@/components/icons"
+import { TechIcons } from "@/components/tech-icons"
 import "./animation.css"
 import LinkCard from "./link-card"
 import { Showcases } from "./showcases"
@@ -58,7 +58,7 @@ const ComponentSection = () => {
             className="flex items-center w-full divide-x max-w-screen-xl mt-10 transition"
           >
             {Showcases.map((showcase) => {
-              const Icon = Icons[showcase.group]
+              const Icon = TechIcons[showcase.group]
 
               return (
                 <TabsTrigger

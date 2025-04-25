@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google"
-import Navbar from "@/components/layout/navbar"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import "./globals.css"
 import { baseUrl, createMetadata } from "@/utils/metadata"
 import { ThemeProvider } from "next-themes"
+import { NuqsAdapter } from "nuqs/adapters/next/app"
 
 const inter = Inter({ subsets: ["latin"], fallback: ["sans serif"] })
 
@@ -23,9 +23,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Navbar />
           <TailwindIndicator />
-          {children}
+          <NuqsAdapter>{children}</NuqsAdapter>
         </ThemeProvider>
       </body>
     </html>

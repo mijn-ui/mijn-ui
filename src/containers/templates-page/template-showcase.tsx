@@ -1,4 +1,5 @@
-import { Suspense } from "react"
+"use client"
+
 import { Button } from "@mijn-ui/react-button"
 import { cn } from "@mijn-ui/react-theme"
 import { ThemeImage } from "@/components/ui/theme-image"
@@ -17,13 +18,7 @@ const TemplateShowcase = () => {
 
   const filteredTemplates = filteredGroups.flatMap((group) => group.items)
   return (
-    <Suspense
-      fallback={
-        <div className="py-8 px-5">
-          <div>Loading...</div>
-        </div>
-      }
-    >
+    <>
       <div className="mt-12 flex gap-1 z-10 items-center justify-center md:justify-end sticky bg-background py-2 top-14">
         {TemplateGroups.map((group) => {
           const Icon = TechIcons[group]
@@ -108,7 +103,7 @@ const TemplateShowcase = () => {
           </div>
         )}
       </div>
-    </Suspense>
+    </>
   )
 }
 

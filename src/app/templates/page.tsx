@@ -1,8 +1,8 @@
 import React from "react"
-import TemplatesShowcase from "@/containers/templates-page"
+import TemplatePage from "@/containers/templates-page"
 
 const Templates = () => {
-  return <TemplatesShowcase />
+  return <TemplatePage />
 }
 
 export default Templates

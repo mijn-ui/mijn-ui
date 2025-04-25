@@ -48,7 +48,7 @@ type TemplateCardProps = {
 }
 
 export const TemplateCard = ({ template }: TemplateCardProps) => {
-  const Icon = TechIcons[template.technology as keyof typeof TechIcons]
+  const Icon = TechIcons[template.technologies as keyof typeof TechIcons]
 
   return (
     <Card className="w-full rounded-2xl max-w-96 lg:max-w-none flex flex-col">
@@ -74,7 +74,7 @@ export const TemplateCard = ({ template }: TemplateCardProps) => {
           size="xs"
           className="absolute top-5 right-6 flex items-center gap-1 w-fit"
         >
-          <Icon className="text-foreground size-3.5" /> {template.technology}
+          <Icon className="text-foreground size-3.5" /> {template.technologies}
         </Badge>
         <CardTitle className="mb-1 text-lg">{template.name}</CardTitle>
         <CardDescription>{template.description}</CardDescription>

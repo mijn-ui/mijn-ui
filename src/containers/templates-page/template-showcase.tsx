@@ -63,6 +63,7 @@ const TemplateShowcase = () => {
                   {template.description}
                 </p>
               </div>
+
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {template.images.light.map((lightImage, index) => (
                   <div
@@ -80,14 +81,27 @@ const TemplateShowcase = () => {
                   </div>
                 ))}
               </div>
-              <div className="flex gap-2 justify-center md:justify-start mt-4">
-                {template.githubURL && (
-                  <GithubLinkButton href={template.githubURL} />
-                )}
+              <div className="flex gap-2 w-full items-start justify-center md:justify-between mt-4">
+                <div className="flex items-center gap-2 mt-4">
+                  {template.githubURL && (
+                    <GithubLinkButton href={template.githubURL} />
+                  )}
 
-                {template.previewURL && (
-                  <PreviewLinkButton href={template.previewURL} />
-                )}
+                  {template.previewURL && (
+                    <PreviewLinkButton href={template.previewURL} />
+                  )}
+                </div>
+
+                <div className="p-5 space-y-2 md:block min-w-96 hidden">
+                  <h4>Built With:</h4>
+                  <ul className="px-5 grid grid-cols-2 gap-2 w-full text-muted-foreground max-w-md">
+                    {template.technologies.map((tech) => (
+                      <li className="list-disc text-sm" key={tech}>
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           ))

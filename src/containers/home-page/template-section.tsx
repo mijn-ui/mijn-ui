@@ -1,6 +1,4 @@
-import React from "react"
 import Link from "next/link"
-import { Badge } from "@mijn-ui/react-badge"
 import { Button } from "@mijn-ui/react-button"
 import {
   Card,
@@ -12,7 +10,6 @@ import {
 } from "@mijn-ui/react-card"
 import { ThemeImage } from "@/components/ui/theme-image"
 import { SubTitle } from "@/components/ui/typography"
-import { TechIcons } from "@/components/tech-icons"
 import { Template, Templates } from "@/containers/templates-page/data"
 import { GithubLinkButton } from "@/containers/templates-page/github-link-button"
 import { PreviewLinkButton } from "@/containers/templates-page/preview-link-button"
@@ -48,8 +45,6 @@ type TemplateCardProps = {
 }
 
 export const TemplateCard = ({ template }: TemplateCardProps) => {
-  const Icon = TechIcons[template.technologies as keyof typeof TechIcons]
-
   return (
     <Card className="w-full rounded-2xl max-w-96 lg:max-w-none flex flex-col">
       <CardHeader>
@@ -70,12 +65,6 @@ export const TemplateCard = ({ template }: TemplateCardProps) => {
       </CardHeader>
 
       <CardContent className="p-4 relative">
-        <Badge
-          size="xs"
-          className="absolute top-5 right-6 flex items-center gap-1 w-fit"
-        >
-          <Icon className="text-foreground size-3.5" /> {template.technologies}
-        </Badge>
         <CardTitle className="mb-1 text-lg">{template.name}</CardTitle>
         <CardDescription>{template.description}</CardDescription>
       </CardContent>

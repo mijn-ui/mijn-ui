@@ -18,7 +18,7 @@ export const Showcases: Showcase[] = [
     items: [
       {
         name: "Tabs",
-        link: "/tailwind/docs/components/tabs",
+        link: "/tailwind/docs/components/tab-bar",
         component: React.lazy(() => import("./showcase-tabs")),
       },
       {
@@ -37,8 +37,8 @@ export const Showcases: Showcase[] = [
         component: React.lazy(() => import("./showcase-calendar")),
       },
       {
-        name: "Select",
-        link: "/tailwind/docs/components/select",
+        name: "Combobox",
+        link: "/tailwind/docs/components/combo-box",
         component: React.lazy(() => import("./showcase-select")),
       },
       {
@@ -48,7 +48,7 @@ export const Showcases: Showcase[] = [
       },
       {
         name: "Kanban",
-        link: "/tailwind/blocks/kanban",
+        link: "/tailwind/docs/blocks/kanban",
         component: React.lazy(() => import("./showcase-kanban")),
       },
       {
@@ -100,7 +100,7 @@ export const Showcases: Showcase[] = [
       },
       {
         name: "Kanban",
-        link: "/react/blocks/kanban",
+        link: "/react/blocks/kanban-column",
         component: React.lazy(() => import("./showcase-kanban")),
       },
       {

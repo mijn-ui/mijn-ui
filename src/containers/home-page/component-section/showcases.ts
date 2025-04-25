@@ -1,7 +1,5 @@
 import React from "react"
 
-type ShowcaseGroup = "tailwind" | "react" | "laravel"
-
 type ShowcaseItem = {
   name: string
   link: string
@@ -10,7 +8,7 @@ type ShowcaseItem = {
 }
 
 type Showcase = {
-  group: ShowcaseGroup
+  group: "tailwind" | "react" | "laravel"
   items: ShowcaseItem[]
 }
 

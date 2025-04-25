@@ -16,14 +16,26 @@ const ThemeToggler = ({ ...props }: ButtonProps) => {
 
   if (resolvedTheme === "dark") {
     return (
-      <Button onClick={() => setTheme("light")} {...props}>
+      <Button
+        variant="ghost"
+        radius="full"
+        size="sm"
+        onClick={() => setTheme("light")}
+        {...props}
+      >
         <SunIcon fontSize={16} />
       </Button>
     )
   }
   if (resolvedTheme === "light") {
     return (
-      <Button onClick={() => setTheme("dark")} {...props}>
+      <Button
+        variant="ghost"
+        radius="full"
+        size="sm"
+        onClick={() => setTheme("dark")}
+        {...props}
+      >
         <MoonIcon fontSize={14} />
       </Button>
     )

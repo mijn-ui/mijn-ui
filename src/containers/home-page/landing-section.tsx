@@ -1,13 +1,11 @@
 import React from "react"
 import { Button } from "@mijn-ui/react-button"
+import { Title } from "@/components/ui/typography"
 
 const LandingSection = () => {
   return (
     <section className="max-w-4xl w-full flex items-start sm:items-center flex-col text-left sm:text-center">
-      <h1 className="bg-gradient-to-br from-foreground to-muted-foreground/70 bg-clip-text text-3xl/[1.2] font-bold tracking-tight text-transparent xs:text-4xl/[1.2] sm:font-extrabold md:text-5xl/[1.2]">
-        Reusable components for clean, <br />
-        responsive interfaces.
-      </h1>
+      <Title>Reusable components for clean, responsive interfaces.</Title>
 
       <div className="mt-6 text-medium font-medium text-muted-foreground sm:text-medium">
         <p className="hidden sm:block">
@@ -28,7 +26,7 @@ const LandingSection = () => {
         </Button>
 
         <Button variant={"outlined"} asChild>
-          <a href="/tailwind">Blocks & Templates</a>
+          <a href="/templates">Browse Templates</a>
         </Button>
       </div>
     </section>

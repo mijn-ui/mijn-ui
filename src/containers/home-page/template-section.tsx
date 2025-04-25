@@ -10,25 +10,27 @@ import {
   CardHeader,
   CardTitle,
 } from "@mijn-ui/react-card"
-import { Icons } from "@/components/icons"
-import { Templates } from "./data"
-import { TemplateImage } from "./template-image"
-import { Template } from "@/types"
-import { FaGithub } from "react-icons/fa"
-import { LuArrowRight, LuExternalLink } from "react-icons/lu"
+import { ThemeImage } from "@/components/ui/theme-image"
+import { SubTitle } from "@/components/ui/typography"
+import { TechIcons } from "@/components/tech-icons"
+import { Template, Templates } from "@/containers/templates-page/data"
+import { GithubLinkButton } from "@/containers/templates-page/github-link-button"
+import { PreviewLinkButton } from "@/containers/templates-page/preview-link-button"
+import { LuArrowRight } from "react-icons/lu"
 
 const TemplateSection = () => {
+  const flattenTemplates = Templates.flatMap((group) => group.items).slice(0, 9)
+
   return (
     <section className="pb-14 pt-16 md:pt-32 w-full max-w-screen-xl">
-      <h3 className="bg-gradient-to-br from-foreground to-muted-foreground/70 bg-clip-text text-3xl/[1.2] font-bold tracking-tight text-transparent sm:text-4xl/[1.2] sm:font-extrabold lg:text-start text-center">
-        Templates & Blocks
-      </h3>
+      <SubTitle className="lg:text-start text-center">Templates</SubTitle>
       <div className="flex items-center justify-center flex-col">
         <div className="w-fit mt-10 grid grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {Templates.map((template) => (
+          {flattenTemplates.map((template) => (
             <TemplateCard key={template.id} template={template} />
           ))}
         </div>
+
         <div className="w-full flex items-center justify-center mt-10">
           <Button asChild color="primary" size="lg" className="text-sm">
             <Link href={"/templates"}>
@@ -45,8 +47,8 @@ type TemplateCardProps = {
   template: Template
 }
 
-const TemplateCard = ({ template }: TemplateCardProps) => {
-  const Icon = Icons[template.technology as keyof typeof Icons]
+export const TemplateCard = ({ template }: TemplateCardProps) => {
+  const Icon = TechIcons[template.technology as keyof typeof TechIcons]
 
   return (
     <Card className="w-full rounded-2xl max-w-96 lg:max-w-none flex flex-col">
@@ -56,13 +58,12 @@ const TemplateCard = ({ template }: TemplateCardProps) => {
           target="_blank"
           className="w-full h-full rounded-large aspect-video border border-border/40 overflow-hidden bg-accent/50"
         >
-          <TemplateImage
+          <ThemeImage
             width={1920}
             height={1080}
             alt={template.name}
-            lightSrc={template.images.light}
-            darkSrc={template.images.dark}
-            placeholder="blur"
+            lightSrc={template.cover.light}
+            darkSrc={template.cover.dark}
             className="size-full object-cover hover:scale-105 transition duration-300"
           />
         </Link>
@@ -80,21 +81,9 @@ const TemplateCard = ({ template }: TemplateCardProps) => {
       </CardContent>
 
       <CardFooter className="justify-end gap-2">
-        {template.githubURL && (
-          <Button asChild size="xs" className="text-xs" variant="outlined">
-            <Link href={template.githubURL} target="_blank">
-              <FaGithub />
-              Github
-            </Link>
-          </Button>
-        )}
+        {template.githubURL && <GithubLinkButton href={template.githubURL} />}
         {template.previewURL && (
-          <Button size="xs" asChild className="text-xs">
-            <Link href={template.previewURL} target="_blank">
-              Preview
-              <LuExternalLink />
-            </Link>
-          </Button>
+          <PreviewLinkButton href={template.previewURL} />
         )}
       </CardFooter>
     </Card>

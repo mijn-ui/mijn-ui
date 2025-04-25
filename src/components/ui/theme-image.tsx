@@ -1,11 +1,10 @@
 "use client"
 
-import React from "react"
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import Image from "next/image"
 import { useTheme } from "next-themes"
 
-type TemplateImageProps = {
+type ThemeImageProps = {
   lightSrc: string
   darkSrc: string
   alt: string
@@ -14,14 +13,15 @@ type TemplateImageProps = {
   className?: string
 } & Omit<React.ComponentProps<typeof Image>, "src">
 
-export const TemplateImage = ({
+export const ThemeImage = ({
   lightSrc,
   darkSrc,
   alt,
   width,
   height,
   className,
-}: TemplateImageProps) => {
+  ...props
+}: ThemeImageProps) => {
   const [mounted, setMounted] = useState(false)
   const { theme } = useTheme()
 
@@ -33,21 +33,17 @@ export const TemplateImage = ({
     return null
   }
 
-  return theme === "dark" ? (
+  // Dynamically set the src based on the theme
+  const src = theme === "dark" ? darkSrc : lightSrc
+
+  return (
     <Image
       width={width}
       height={height}
       alt={alt}
-      src={darkSrc}
+      src={src}
       className={className}
-    />
-  ) : (
-    <Image
-      width={width}
-      height={height}
-      alt={alt}
-      src={lightSrc}
-      className={className}
+      {...props}
     />
   )
 }

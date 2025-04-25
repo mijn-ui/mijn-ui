@@ -2,6 +2,7 @@ import React from "react"
 import Link from "next/link"
 import { Avatar, AvatarFallback, AvatarImage } from "@mijn-ui/react-avatar"
 import { cn } from "@mijn-ui/react-theme"
+import { SubTitle } from "@/components/ui/typography"
 import { getGitHubContributors } from "./get-contributors"
 
 const ContributorSection = async () => {
@@ -9,9 +10,7 @@ const ContributorSection = async () => {
 
   return (
     <section className="flex w-full flex-col items-center justify-center p-2 sm:p-5 max-w-screen-lg text-center">
-      <h3 className="bg-gradient-to-br from-foreground to-muted-foreground/70 bg-clip-text text-3xl/[1.2] font-bold tracking-tight text-transparent sm:text-4xl/[1.2] sm:font-extrabold w-full">
-        Contributors
-      </h3>
+      <SubTitle className="w-full">Contributors</SubTitle>
       <p className="text-muted-foreground w-full mt-1">
         We&apos;re grateful to our contributors who have shaped and strengthened
         our community. <br /> Their dedication and passion make mijnui possible.
@@ -73,8 +72,6 @@ const Contributor = ({
           {name}
         </Link>
       )}
-
-      {/* <p className="text-xs text-muted-foreground">&#8226; {position}</p> */}
     </div>
   )
 }

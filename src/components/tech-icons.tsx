@@ -3,7 +3,7 @@ import { IconSvgProps } from "@/types"
 import { FaLaravel, FaReact } from "react-icons/fa"
 import { RiTailwindCssFill } from "react-icons/ri"
 
-export const Icons = {
+export const TechIcons = {
   tailwind: (props: IconSvgProps) => (
     <RiTailwindCssFill
       size={18}
@@ -11,7 +11,7 @@ export const Icons = {
       {...props}
     />
   ),
-  "next.js": (props: IconSvgProps) => (
+  next: (props: IconSvgProps) => (
     <svg
       viewBox="0 0 32 32"
       height="1em"

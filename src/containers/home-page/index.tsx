@@ -1,4 +1,5 @@
 import React from "react"
+import Link from "next/link"
 import { Button } from "@mijn-ui/react-button"
 import {
   DropdownMenu,
@@ -23,12 +24,12 @@ const Homepage = () => {
     <>
       <Navbar>
         <div className="hidden md:flex items-center gap-4">
-          <a
-            href={"#templates"}
+          <Link
+            href={"/templates"}
             className="text-sm text-muted-foreground hover:text-foreground"
           >
             Templates
-          </a>
+          </Link>
           <a
             href={"#contributors"}
             className="text-sm text-muted-foreground hover:text-foreground"

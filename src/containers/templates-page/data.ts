@@ -10,7 +10,7 @@ export type Template = {
     dark: string
   }
   images: { light: string[]; dark: string[] }
-  technology: "next" | "tailwind" | "react" | "laravel"
+  technologies: string[]
   previewURL: string
   githubURL: string
 }
@@ -52,7 +52,17 @@ export const Templates: Templates[] = [
             "/images/templates/rag-chat/dark/03.png",
           ],
         },
-        technology: "next",
+        technologies: [
+          "Next.js v15",
+          "React.js v19",
+          "next-auth v5",
+          "next-themes v0.4",
+          "Tailwind.css v3.4",
+          "react-query v5",
+          "react-hook-form v7",
+          "zod v3",
+          "mijn-ui v0.1.0",
+        ],
         previewURL: "https://mijnui-ai-chat-template.vercel.app",
         githubURL: "https://github.com/mijn-ui/ai-chat-template",
       },
@@ -78,7 +88,12 @@ export const Templates: Templates[] = [
             "/images/templates/erp/dark/03.png",
           ],
         },
-        technology: "next",
+        technologies: [
+          "Next.js v15",
+          "React.js v19",
+          "next-themes v0.4",
+          "mijn-ui v0.1.0",
+        ],
         previewURL: "https://mijnui-erp-template.vercel.app",
         githubURL: "https://github.com/mijn-ui/erp-template",
       },
@@ -104,7 +119,13 @@ export const Templates: Templates[] = [
             "/images/templates/dashboard/dark/03.png",
           ],
         },
-        technology: "next",
+        technologies: [
+          "next.js",
+          "next-auth v5",
+          "next-themes v0.4",
+          "react-hook-form v7",
+          "mijn-ui v0.1.0",
+        ],
         previewURL: "https://mijnui-dashboard-template.vercel.app",
         githubURL: "https://github.com/mijn-ui/dashboard-template",
       },

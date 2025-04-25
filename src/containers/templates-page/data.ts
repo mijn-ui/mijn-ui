@@ -104,7 +104,7 @@ export const Templates: Templates[] = [
             "/images/templates/dashboard/dark/03.png",
           ],
         },
-        technology: "tailwind",
+        technology: "next",
         previewURL: "https://mijnui-dashboard-template.vercel.app",
         githubURL: "https://github.com/mijn-ui/dashboard-template",
       },

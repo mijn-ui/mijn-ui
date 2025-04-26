@@ -18,7 +18,7 @@ export const Showcases: Showcase[] = [
     items: [
       {
         name: "Tabs",
-        link: "/tailwind/docs/components/tab-bar",
+        link: "/tailwind/docs/components/tabs",
         component: React.lazy(() => import("./showcase-tabs")),
       },
       {
@@ -37,8 +37,8 @@ export const Showcases: Showcase[] = [
         component: React.lazy(() => import("./showcase-calendar")),
       },
       {
-        name: "Combobox",
-        link: "/tailwind/docs/components/combo-box",
+        name: "Select",
+        link: "/tailwind/docs/components/select",
         component: React.lazy(() => import("./showcase-select")),
       },
       {
